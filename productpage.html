@@ -211,22 +211,26 @@
             </div>
             <h4>CATEGORY</h4>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="topssort()" class="checkboxsize">
                 <label>Tops</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="shirtsort()" class="checkboxsize">
                 <label>Shirts</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="jeanssort()" class="checkboxsize">
                 <label>Jeans</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="tshirtsort()" class="checkboxsize">
                 <label>T-Shirt</label>
             </div>
-            <button>VIEW ALL</button>
+            <div>
+                <input type="checkbox" onchange="dresssort()" class="checkboxsize">
+                <label>Dress</label>
+            </div>
+            <button onclick="dummys1()">VIEW ALL</button>
             <h4>BRANDS</h4>
             <div>
                 <input type="search" placeholder="Search in brand" id="searchbox">
@@ -247,7 +251,7 @@
                 <input type="checkbox" class="checkboxsize">
                 <label>MERAKI</label>
             </div>
-            <button>VIEW ALL</button>
+            <button onclick="dummys1()">VIEW ALL</button>
             <h4>PRICE RANGE</h4>
             <div>
                 <input type="checkbox" class="checkboxsize">
@@ -414,7 +418,7 @@ let details=[
             productcode:145780,
             gender:"Women",
             discount:"60",
-            category:"Dress",
+            category:"Jeans",
             material:"cotton polyester blend",
             size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
             description:"Trousers by Oxolloxo",
@@ -1293,6 +1297,9 @@ let details1=[
 
 
         displayproducts(details);
+
+
+
         let menscount=0;
         let womencount=0;
         let prod=document.getElementById("productscount");
@@ -1353,6 +1360,21 @@ let details1=[
         function dummys() {
             displayproducts(details1);
         }
+        function dummys1() {
+            let all=document.getElementsByClassName("checkboxsize");
+            for(let i=0; i<all.length; i++) {
+                all[i].checked=false;
+            }
+            menscount=0;
+            womencount=0;
+            topscount=0;
+            shirtcount=0;
+            jeanscount=0;
+            tshirtcount=0;
+            dresscount=0;
+            displayproducts(details1);
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
         function sortLH() {
          let arr=details.sort(function(a,b) {
           return a.price - b.price;
@@ -1373,6 +1395,110 @@ let details1=[
         });
         displayproducts(arr);
          }
+
+         let topscount=0;
+         function topssort() {
+            if(topscount%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].category=="Top") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            topscount++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            topscount++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+         let shirtcount=0;
+         function shirtsort() {
+            if(shirtcount%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].category=="Shirt") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            shirtcount++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            shirtcount++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let jeanscount=0;
+         function jeanssort() {
+            if(jeanscount%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].category=="Jeans") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            jeanscount++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            jeanscount++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let tshirtcount=0;
+         function tshirtsort() {
+            if(tshirtcount%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].category=="T-Shirt") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            tshirtcount++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            tshirtcount++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+         
+
+         let dresscount=0;
+         function dresssort() {
+            if(dresscount%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].category=="Dress") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            dresscount++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            dresscount++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
     </script>
 </body>
 </html>
