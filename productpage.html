@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+        }
+        #maincontainer {
+            display: grid;
+            grid-template-rows:60px 100%;
+            border: 2px solid red;
+        }
+        #topnavbar {
+            background-color:white;
+            display: grid;
+            grid-template-columns:100%;
+            grid-template-rows:60px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+            z-index: 10;
+        }
+        #topnavbar > div:nth-child(1) {
+            display:flex;
+        }
+        #topnavbar > div:nth-child(1) > div:nth-child(1) {
+            border:1px solid red;
+            flex-basis: 40%;
+        }
+        #topnavbar > div:nth-child(1) > div:nth-child(2) {
+            border:1px solid red;
+            flex-basis: 20%;
+        }
+        #topnavbar > div:nth-child(1) > div:nth-child(2) > img {
+            margin-left:20%;
+            margin-top: 16px;
+        }
+        #topnavbar > div:nth-child(1) > div:nth-child(3) {
+            border:1px solid red;
+            flex-basis: 40%;
+        }
+        #mainsection {
+            display: grid;
+            grid-template-columns: 18% 82%;
+        }
+        #leftsection {
+            border:1px solid red;
+            padding-left: 10%;
+            padding-top: 15px;
+        }
+        #leftsection > p {
+            font-size:14px;
+        }
+        #leftsection > h4 {
+            margin-top:20px;
+            margin-bottom:5px
+        }
+        #leftsection input.checkboxsize {
+            border:1px solid red;
+            width:26px;
+            height:26px;
+            color:green;
+            border-radius:0px;
+            align-items: top;
+            margin-top:5px;
+            margin-bottom:10px;
+        }
+        #leftsection label {
+            position: relative;
+            top: -6px;
+            color:#545454;
+        }
+        #rightsection {
+            border:1px solid red;
+            display: grid;
+            grid-template-rows: 50px 100%;
+        }
+        .navbaroptions > p:hover {
+            font-weight:bold;
+        }
+        .navbaroptions {
+            margin-top: 18px;
+            margin-left: 20px;
+            display: inline-block;
+        }
+        .navbardivs > div:nth-child(1) {
+            width: 50px;
+        }
+        .navbardivs > div:nth-child(2) {
+            width: 70px;
+        }
+        .navbardivs > div:nth-child(3) {
+            width: 90px;
+        }
+        .navbardivs > div:nth-child(4) {
+            width: 110px;
+        }
+        .navbardivs > div:nth-child(5) {
+            width: 110px;
+        }
+        #products {
+            display: grid;
+            grid-template-columns: repeat(5,18%);
+            grid-template-rows: repeat(9,385px);
+            gap: 25px;
+        }
+        #products > div {
+            border: 5px solid white;
+        }
+        #products > div:hover {
+            
+            box-shadow: 0px 0px 7px #CFD8DC;
+            transition: box-shadow 0.6s ease-in-out;
+        }
+        .one > img {
+            width:100%;
+
+            z-index: 1;
+        }
+        .one {
+            z-index: 1;
+            position: relative;
+        }
+        .one > p {
+            font-size:1%;
+        }
+        .two {
+            top: -51.5px;
+            height:160px;
+            position: relative;
+            z-index: 0;
+           
+        }
+        .one:hover {
+            z-index: 0;
+        }
+        .two:hover {
+            z-index: 1;
+        }
+        #leftsection > button {
+            width:35%;
+            height:35px;
+            font-weight: bold;
+            background-color:#333333;
+            color: white;
+            border: none;
+            margin-bottom: 10px;
+            margin-top:4px;
+        }
+        #searchbox {
+            height:30px;
+            font-size:15px;
+            padding-left: 10px;
+            margin-bottom: 5px;
+        }
+        #righttop > p {
+            display: inline-block;
+            position: relative;
+            top: 10px;
+            font-weight: bold;
+        }
+        #sortby {
+            margin-left: 85%;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="maincontainer">
+        <div id="topnavbar">
+            <div>
+                <div class="navbardivs">
+                    <div class="navbaroptions"><p>MEN</p></div>
+                    <div class="navbaroptions"><p>WOMEN</p></div>
+                    <div class="navbaroptions"><p>THE BLOG</p></div>
+                    <div class="navbaroptions"><p>KOOVSXYOU</p></div>
+                    <div class="navbaroptions"><p>IN STYLE OF</p></div>
+                </div>
+                <div>
+                    <img src="https://images.koovs.com/uploads/koovs/logo.png">
+                </div>
+                <div>
+                    <span class="material-icons-outlined">
+                        favorite_border 
+                        </span></span>
+                </div>
+            </div>
+        </div>
+        <div id="mainsection">
+            <div id="leftsection">
+                <p>Home/StreetWear</p>
+                <h4>Filters</h4>
+                <h4>GENDER</h4>
+                <div>
+                <input type="checkbox" onchange="mensort()" class="checkboxsize">
+                <label>Men</label>
+            </div>
+            <div>
+                <input type="checkbox" onchange="womensort()" class="checkboxsize">
+                <label>Women</label>
+            </div>
+            <h4>CATEGORY</h4>
+            <div>
+                <input type="checkbox" class="checkboxsize">
+                <label>Tops</label>
+            </div>
+            <div>
+                <input type="checkbox" class="checkboxsize">
+                <label>Shirts</label>
+            </div>
+            <div>
+                <input type="checkbox" class="checkboxsize">
+                <label>Jeans</label>
+            </div>
+            <div>
+                <input type="checkbox" class="checkboxsize">
+                <label>T-Shirt</label>
+            </div>
+            <button>VIEW ALL</button>
+            <h4>BRANDS</h4>
+            <div>
+                <input type="search" placeholder="Search in brand" id="searchbox">
+            </div>
+            <div>
+                <input type="checkbox" class="checkboxsize">
+                <label>Blue Saint</label>
+            </div>
+            <div>
+                <input type="checkbox" class="checkboxsize">
+                <label>Oxolloxo</label>
+            </div>
+            <div>
+                <input type="checkbox" class="checkboxsize">
+                <label>KOOVS</label>
+            </div>
+            <div>
+                <input type="checkbox" class="checkboxsize">
+                <label>MERAKI</label>
+            </div>
+            <button>VIEW ALL</button>
+            <h4>PRICE RANGE</h4>
+            <div>
+                <input type="checkbox" class="checkboxsize">
+                <label>Rs.200 - 500(155)</label>
+            </div>
+            <div>
+                <input type="checkbox" class="checkboxsize">
+                <label>Rs.501 - 900(56)</label>
+            </div>
+            <div>
+                <input type="checkbox" class="checkboxsize">
+                <label>Rs.900 - 2599(218)</label>
+            </div>
+            <h4>DISCOUNT</h4>
+            <div>
+                <input type="checkbox" class="checkboxsize">
+                <label>0% - 29%(41)</label>
+            </div>
+            <div>
+                <input type="checkbox" class="checkboxsize">
+                <label>30% - 59%(5)</label>
+            </div>
+            <div>
+                <input type="checkbox" class="checkboxsize">
+                <label>60% - 89%(23)</label>
+            </div>
+            </div>
+            <div id="rightsection">
+                <div id="righttop">
+                    <p id="productscount">Street Wear ( 20 Products )</p>
+                    <select onchange="vala()" id="sortby">
+                        <option value="" disabled selected hidden>Sort By</option>
+                        <option>Relevance</option>
+                        <option>What's New</option>
+                        <option>Price Low to High</option>
+                        <option>Price High to Low</option>
+                        <option>Discount High to Low</option>
+                    </select>           
+                </div>
+                <div id="products">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+let details=[
+        {
+            brand:"Blue Saint",
+            name:"Horizontal Stripe Casual Top",
+            price:999,
+            priceoff:"₹2199",
+            productcode:153132,
+            gender:"Women",
+            discount:"60",
+            category:"Top",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:" Top by Blue Saint,Made from Cotton,Round neck,Horizontal stripe,Half Sleeves,Split hem,Slim fit",
+            commodity:"Women's Tops",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/170374_1a323a37ddc44350861809967d387cf5_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/170374_1a323a37ddc44350861809967d387cf5_front_super_zoom.webp",
+            img2:"https://product.koovs.com/170374_1a323a37ddc44350861809967d387cf5_back_super_zoom.webp",
+            img3:"https://product.koovs.com/170374_1a323a37ddc44350861809967d387cf5_left_super_zoom.webp",
+        },
+        {
+            brand:"Blue Saint",
+            name:"Camo Print Patch Pocket Shirt",
+            price:1000,
+            priceoff:"₹2499",
+            productcode:138041,
+            gender:"Men",
+            discount:"50",
+            category:"Shirt",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Casual Shirt by BLUE SAINT",
+            commodity:"Men's Jackets",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/155029_312d286269fe425a8a56d68486f536d0_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/155029_312d286269fe425a8a56d68486f536d0_back_super_zoom.webp",
+            img2:"https://product.koovs.com/155029_312d286269fe425a8a56d68486f536d0_left_super_zoom.webp",
+            img3:"https://product.koovs.com/155029_312d286269fe425a8a56d68486f536d0_right_super_zoom.webp",
+        },
+        {
+            brand:"Oxolloxo",
+            name:"Strappy Slit Maxi Dress",
+            price:660,
+            priceoff:"₹1649",
+            productcode:145762,
+            gender:"Women",
+            discount:"60",
+            category:"Dress",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Maxi Dress by Oxolloxo ,Made from cotton ,Scoop neckline,All over print.",
+            commodity:"Women's Maxi Dresses",
+            country:"India",
+            manufacturer:"KPA Apparels Private Limited",
+            address:"1st Floor, C-134, Sector 63, Gautam Buddha Nagar, Uttar Pradesh-201301, Gautam Buddha Nagar, Uttar Pradesh, 201301",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/162902_6bf2f0b021c14625b132820f9203a34a_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/162902_6bf2f0b021c14625b132820f9203a34a_front_super_zoom.webp",
+            img2:"https://product.koovs.com/162902_6bf2f0b021c14625b132820f9203a34a_back_super_zoom.webp",
+            img3:"https://product.koovs.com/162902_6bf2f0b021c14625b132820f9203a34a_left_super_zoom.webp",
+        },
+        {
+            brand:"KOOVS",
+            name:"Smiley Slogan Print T-Shirt",
+            price:450,
+            priceoff:"₹899",
+            productcode:149374,
+            gender:"Men",
+            discount:"50",
+            category:"T-Shirt",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"T-Shirt by KOOVS,Made from cotton ,Crew neckline,Slogan print",
+            commodity:"Men's T-shirts",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/166587_94b23e4b24144168992ceb04a5c329ee_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/166587_94b23e4b24144168992ceb04a5c329ee_front_super_zoom.webp",
+            img2:"https://product.koovs.com/166587_94b23e4b24144168992ceb04a5c329ee_back_super_zoom.webp",
+            img3:"https://product.koovs.com/166587_94b23e4b24144168992ceb04a5c329ee_left_super_zoom.webp",
+        },
+        {
+            brand:"Oxolloxo",
+            name:"Floral Dot Print Round Neck Dress",
+            price:770,
+            priceoff:"₹2199",
+            productcode:145809,
+            gender:"Women",
+            discount:"65",
+            category:"Dress",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Dress by Oxolloxo,Made from cotton ,Round neckline,All over floral dot print,Cinched waist.",
+            commodity:"Women's Midi Dresses",
+            country:"India",
+            manufacturer:"KPA Apparels Private Limited",
+            address:"1st Floor, C-134, Sector 63, Gautam Buddha Nagar, Uttar Pradesh-201301, Gautam Buddha Nagar, Uttar Pradesh, 201301",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/162949_ab223169c5d24c73bba1b62ef78539a5_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/162949_ab223169c5d24c73bba1b62ef78539a5_front_super_zoom.webp",
+            img2:"https://product.koovs.com/162949_ab223169c5d24c73bba1b62ef78539a5_back_super_zoom.webp",
+            img3:"https://product.koovs.com/162949_ab223169c5d24c73bba1b62ef78539a5_left_super_zoom.webp",
+        },
+        {
+            brand:"Oxolloxo",
+            name:"Abstract Print Drawcord Trousers",
+            price:760,
+            priceoff:"₹1899",
+            productcode:145780,
+            gender:"Women",
+            discount:"60",
+            category:"Dress",
+            material:"cotton polyester blend",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Trousers by Oxolloxo",
+            commodity:"Women's Trousers",
+            country:"India",
+            manufacturer:"KPA Apparels Private Limited",
+            address:"1st Floor, C-134, Sector 63, Gautam Buddha Nagar, Uttar Pradesh-201301, Gautam Buddha Nagar, Uttar Pradesh, 201301",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/162920_12c90eed39664e878a19bb3b6fb69e17_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/162920_12c90eed39664e878a19bb3b6fb69e17_front_super_zoom.webp",
+            img2:"https://product.koovs.com/162920_12c90eed39664e878a19bb3b6fb69e17_back_super_zoom.webp",
+            img3:"https://product.koovs.com/162920_12c90eed39664e878a19bb3b6fb69e17_left_super_zoom.webp",
+        },
+        {
+            brand:"Blue Saint",
+            name:"Graphic Slogan Print Round Neck T-Shirt",
+            price:280,
+            priceoff:"₹699",
+            productcode:139758,
+            gender:"Men",
+            discount:"60",
+            category:"T-Shirt",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"T-shirt by Blue Saint",
+            commodity:"Men's T-shirts",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/156806_2d563c3c1f6948dfbded3565fac24919_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/156806_2d563c3c1f6948dfbded3565fac24919_front_super_zoom.webp",
+            img2:"https://product.koovs.com/156806_2d563c3c1f6948dfbded3565fac24919_back_super_zoom.webp",
+            img3:"https://product.koovs.com/156806_2d563c3c1f6948dfbded3565fac24919_left_super_zoom.webp",
+        },
+        {
+            brand:"KOOVS",
+            name:"Slogan Placement Print T-Shirt",
+            price:350,
+            priceoff:"₹699",
+            productcode:149945,
+            gender:"Women",
+            discount:"50",
+            category:"T-Shirt",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"T-Shirt by KOOVS",
+            commodity:"Women's T-shirts",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/167158_dadc360065db496bba5050c430676f4a_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/167158_dadc360065db496bba5050c430676f4a_front_super_zoom.webp",
+            img2:"https://product.koovs.com/167158_dadc360065db496bba5050c430676f4a_back_super_zoom.webp",
+            img3:"https://product.koovs.com/167158_dadc360065db496bba5050c430676f4a_right_super_zoom.webp",
+        },
+        {
+            brand:"MERAKI",
+            name:"Solid Stripe Casual Top",
+            price:240,
+            priceoff:"₹799",
+            productcode:150999,
+            gender:"Women",
+            discount:"70",
+            category:"Top",
+            material:"100% Polyester",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Top by Meraki",
+            commodity:"Women's Tops",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/168217_27e8d76c6aa049e0b12c379749941943_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/168217_27e8d76c6aa049e0b12c379749941943_front_super_zoom.webp",
+            img2:"https://product.koovs.com/168217_27e8d76c6aa049e0b12c379749941943_back_super_zoom.webp",
+            img3:"https://product.koovs.com/168217_27e8d76c6aa049e0b12c379749941943_left_super_zoom.webp",
+        },
+        {
+            brand:"MERAKI",
+            name:"Colour Block Mini Shift Dress",
+            price:450,
+            priceoff:"₹1499",
+            productcode:151052,
+            gender:"Women",
+            discount:"70",
+            category:"Dress",
+            material:"100% Polyester",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Shift Dress by MERAKI",
+            commodity:"Women's Shift Dresses",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/168270_0475458a30714f2c92de82d6abd2c376_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/168270_0475458a30714f2c92de82d6abd2c376_front_super_zoom.webp",
+            img2:"https://product.koovs.com/168270_0475458a30714f2c92de82d6abd2c376_back_super_zoom.webp",
+            img3:"https://product.koovs.com/168270_0475458a30714f2c92de82d6abd2c376_left_super_zoom.webp",
+        },
+        {
+            brand:"Blue Saint",
+            name:"Cuffed Utility Pocket Jeans",
+            price:1000,
+            priceoff:"₹1999",
+            productcode:150107,
+            gender:"Men",
+            discount:"50",
+            category:"Jeans",
+            material:"98% Cotton 2% Elastene",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Jeans by Blue Saint",
+            commodity:"Men's Slim Jeans",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/167322_f9e67a3cd14045bdb3c8ecfd6f3a2ab3_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/167322_f9e67a3cd14045bdb3c8ecfd6f3a2ab3_front_super_zoom.webp",
+            img2:"https://product.koovs.com/167322_f9e67a3cd14045bdb3c8ecfd6f3a2ab3_back_super_zoom.webp",
+            img3:"https://product.koovs.com/167322_f9e67a3cd14045bdb3c8ecfd6f3a2ab3_left_super_zoom.webp",
+        },
+        {
+            brand:"KOOVS",
+            name:"Halter Neck Fringe Bodycon Dress",
+            price:2299,
+            priceoff:"₹4599",
+            productcode:150734,
+            gender:"Women",
+            discount:"10",
+            category:"Dress",
+            material:"100% Polyester",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Bodycon Dress by KOOVS",
+            commodity:"Women's Body Con Dresses",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/167952_2db5fea757e24b6dada247599a0bca41_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/167952_2db5fea757e24b6dada247599a0bca41_front_super_zoom.webp",
+            img2:"https://product.koovs.com/167952_2db5fea757e24b6dada247599a0bca41_back_super_zoom.webp",
+            img3:"https://product.koovs.com/167952_2db5fea757e24b6dada247599a0bca41_left_super_zoom.webp",
+        },
+        {
+            brand:"KOOVS",
+            name:"Graphic-Print Ribbed Neck Sweatshirt",
+            price:1999,
+            priceoff:"₹2199",
+            productcode:149711,
+            gender:"Men",
+            discount:"5",
+            category:"Shirt",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Sweatshirt by KOOVS",
+            commodity:"Men's Hoodies",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/166924_4dc329f305c4436bbf434a81efb5ba19_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/166924_4dc329f305c4436bbf434a81efb5ba19_front_super_zoom.webp",
+            img2:"https://product.koovs.com/166924_4dc329f305c4436bbf434a81efb5ba19_back_super_zoom.webp",
+            img3:"https://product.koovs.com/166924_4dc329f305c4436bbf434a81efb5ba19_left_super_zoom.webp",
+        },
+        {
+            brand:"KOOVS",
+            name:"Back Cut-Out Floral Print Slit Maxi Dress",
+            price:1999,
+            priceoff:"₹2199",
+            productcode:152288,
+            gender:"Women",
+            discount:"5",
+            category:"Dress",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Maxi Dress by KOOVS",
+            commodity:"Women's Maxi Dresses",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/169519_e2d2241f0c334920bf89a0c1f2b44c15_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/169519_e2d2241f0c334920bf89a0c1f2b44c15_front_super_zoom.webp",
+            img2:"https://product.koovs.com/169519_e2d2241f0c334920bf89a0c1f2b44c15_back_super_zoom.webp",
+            img3:"https://product.koovs.com/169519_e2d2241f0c334920bf89a0c1f2b44c15_left_super_zoom.webp",
+        },
+        {
+            brand:"Blue Saint",
+            name:"Distressed Mid Rise Skinny Jeans",
+            price:840,
+            priceoff:"₹2099",
+            productcode:152202,
+            gender:"Men",
+            discount:"30",
+            category:"Jeans",
+            material:"98% Cotton 2% Elastene",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Skinny Jeans by Realm",
+            commodity:"Men's Skinny Jeans",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/169424_8ed0501256324e5eb1cca22ffaa7ace1_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/169424_8ed0501256324e5eb1cca22ffaa7ace1_front_super_zoom.webp",
+            img2:"https://product.koovs.com/169424_8ed0501256324e5eb1cca22ffaa7ace1_back_super_zoom.webp",
+            img3:"https://product.koovs.com/169424_8ed0501256324e5eb1cca22ffaa7ace1_left_super_zoom.webp",
+        },
+        {
+            brand:"Oxolloxo",
+            name:"Blue Wave Printed Women's Crop Top",
+            price:1399,
+            priceoff:"₹1999",
+            productcode:154637,
+            gender:"Women",
+            discount:"30",
+            category:"Top",
+            material:"Polyester",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Blue Wave Printed Women'S Crop Top",
+            commodity:"Women's Crop Tops",
+            country:"India",
+            manufacturer:"KPA Apparels Private Limited",
+            address:"1st Floor, C-134, Sector 63, Gautam Buddha Nagar, Uttar Pradesh-201301, Gautam Buddha Nagar, Uttar Pradesh, 201301",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/171890_7cfef04eaddf486da21bd59b57977727_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/171890_7cfef04eaddf486da21bd59b57977727_front_super_zoom.webp",
+            img2:"https://product.koovs.com/171890_7cfef04eaddf486da21bd59b57977727_back_super_zoom.webp",
+            img3:"https://product.koovs.com/171890_7cfef04eaddf486da21bd59b57977727_left_super_zoom.webp",
+        },
+        {
+            brand:"MERAKI",
+            name:"Essential All Over Print Top",
+            price:300,
+            priceoff:"₹999",
+            productcode:151748,
+            gender:"Women",
+            discount:"70",
+            category:"Top",
+            material:"100% Polyester",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Top by MERAKI",
+            commodity:"Women's Tops",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/168970_cd6ddf376b0a47b585dafe122f80164c_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/168970_cd6ddf376b0a47b585dafe122f80164c_front_super_zoom.webp",
+            img2:"https://product.koovs.com/168970_cd6ddf376b0a47b585dafe122f80164c_back_super_zoom.webp",
+            img3:"https://product.koovs.com/168970_cd6ddf376b0a47b585dafe122f80164c_left_super_zoom.webp",
+        },
+        {
+            brand:"Oxolloxo",
+            name:" All Over Checkered Printed Shirt",
+            price:990,
+            priceoff:"₹2199",
+            productcode:150448,
+            gender:"Men",
+            discount:"55",
+            category:"Shirt",
+            material:"100% cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Casual Shirt by Oxolloxo ",
+            commodity:"Men's Casual Shirts",
+            country:"India",
+            manufacturer:"KPA Apparels Private Limited",
+            address:"1st Floor, C-134, Sector 63, Gautam Buddha Nagar, Uttar Pradesh-201301, Gautam Buddha Nagar, Uttar Pradesh, 201301",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/167666_79e04e6b0d534c00b26548807f7bf8ce_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/167666_79e04e6b0d534c00b26548807f7bf8ce_front_super_zoom.webp",
+            img2:"https://product.koovs.com/167666_79e04e6b0d534c00b26548807f7bf8ce_back_super_zoom.webp",
+            img3:"https://product.koovs.com/167666_79e04e6b0d534c00b26548807f7bf8ce_left_super_zoom.webp",
+        },
+        {
+            brand:"Blue Saint",
+            name:"Mid Wash Skinny Jeans",
+            price:909,
+            priceoff:"₹1299",
+            productcode:140108,
+            gender:"Men",
+            discount:"30",
+            category:"Jeans",
+            material:"98% Cotton 2% Elastene",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Jeans by Blue Saint",
+            commodity:"Men's Skinny Jeans",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/157165_687d0ce7b8874b6f905f51dc9db14d52_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/157165_687d0ce7b8874b6f905f51dc9db14d52_front_super_zoom.webp",
+            img2:"https://product.koovs.com/157165_687d0ce7b8874b6f905f51dc9db14d52_back_super_zoom.webp",
+            img3:"https://product.koovs.com/157165_687d0ce7b8874b6f905f51dc9db14d52_left_super_zoom.webp",
+        },
+        {
+            brand:"Oxolloxo",
+            name:"Paisley Me Women's Shift Dress",
+            price:1329,
+            priceoff:"₹1899",
+            productcode:154664,
+            gender:"Women",
+            discount:"30",
+            category:"Dress",
+            material:"Polyester",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Paisley Me Women'S Shift Dress",
+            commodity:"Women's Shift Dresses",
+            country:"India",
+            manufacturer:"KPA Apparels Private Limited",
+            address:"1st Floor, C-134, Sector 63, Gautam Buddha Nagar, Uttar Pradesh-201301, Gautam Buddha Nagar, Uttar Pradesh, 201301",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/171917_0ba638c9de384e099e28768cdeb6cab0_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/171917_0ba638c9de384e099e28768cdeb6cab0_front_super_zoom.webp",
+            img2:"https://product.koovs.com/171917_0ba638c9de384e099e28768cdeb6cab0_back_super_zoom.webp",
+            img3:"https://product.koovs.com/171917_0ba638c9de384e099e28768cdeb6cab0_left_super_zoom.webp",
+        },
+    ]
+
+
+
+let details1=[
+        {
+            brand:"Blue Saint",
+            name:"Horizontal Stripe Casual Top",
+            price:999,
+            priceoff:"₹2199",
+            productcode:153132,
+            gender:"Women",
+            discount:"60",
+            category:"Top",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:" Top by Blue Saint,Made from Cotton,Round neck,Horizontal stripe,Half Sleeves,Split hem,Slim fit",
+            commodity:"Women's Tops",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/170374_1a323a37ddc44350861809967d387cf5_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/170374_1a323a37ddc44350861809967d387cf5_front_super_zoom.webp",
+            img2:"https://product.koovs.com/170374_1a323a37ddc44350861809967d387cf5_back_super_zoom.webp",
+            img3:"https://product.koovs.com/170374_1a323a37ddc44350861809967d387cf5_left_super_zoom.webp",
+        },
+        {
+            brand:"Blue Saint",
+            name:"Camo Print Patch Pocket Shirt",
+            price:1000,
+            priceoff:"₹2499",
+            productcode:138041,
+            gender:"Men",
+            discount:"50",
+            category:"Shirt",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Casual Shirt by BLUE SAINT",
+            commodity:"Men's Jackets",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/155029_312d286269fe425a8a56d68486f536d0_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/155029_312d286269fe425a8a56d68486f536d0_back_super_zoom.webp",
+            img2:"https://product.koovs.com/155029_312d286269fe425a8a56d68486f536d0_left_super_zoom.webp",
+            img3:"https://product.koovs.com/155029_312d286269fe425a8a56d68486f536d0_right_super_zoom.webp",
+        },
+        {
+            brand:"Oxolloxo",
+            name:"Strappy Slit Maxi Dress",
+            price:660,
+            priceoff:"₹1649",
+            productcode:145762,
+            gender:"Women",
+            discount:"60",
+            category:"Dress",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Maxi Dress by Oxolloxo ,Made from cotton ,Scoop neckline,All over print.",
+            commodity:"Women's Maxi Dresses",
+            country:"India",
+            manufacturer:"KPA Apparels Private Limited",
+            address:"1st Floor, C-134, Sector 63, Gautam Buddha Nagar, Uttar Pradesh-201301, Gautam Buddha Nagar, Uttar Pradesh, 201301",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/162902_6bf2f0b021c14625b132820f9203a34a_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/162902_6bf2f0b021c14625b132820f9203a34a_front_super_zoom.webp",
+            img2:"https://product.koovs.com/162902_6bf2f0b021c14625b132820f9203a34a_back_super_zoom.webp",
+            img3:"https://product.koovs.com/162902_6bf2f0b021c14625b132820f9203a34a_left_super_zoom.webp",
+        },
+        {
+            brand:"KOOVS",
+            name:"Smiley Slogan Print T-Shirt",
+            price:450,
+            priceoff:"₹899",
+            productcode:149374,
+            gender:"Men",
+            discount:"50",
+            category:"T-Shirt",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"T-Shirt by KOOVS,Made from cotton ,Crew neckline,Slogan print",
+            commodity:"Men's T-shirts",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/166587_94b23e4b24144168992ceb04a5c329ee_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/166587_94b23e4b24144168992ceb04a5c329ee_front_super_zoom.webp",
+            img2:"https://product.koovs.com/166587_94b23e4b24144168992ceb04a5c329ee_back_super_zoom.webp",
+            img3:"https://product.koovs.com/166587_94b23e4b24144168992ceb04a5c329ee_left_super_zoom.webp",
+        },
+        {
+            brand:"Oxolloxo",
+            name:"Floral Dot Print Round Neck Dress",
+            price:770,
+            priceoff:"₹2199",
+            productcode:145809,
+            gender:"Women",
+            discount:"65",
+            category:"Dress",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Dress by Oxolloxo,Made from cotton ,Round neckline,All over floral dot print,Cinched waist.",
+            commodity:"Women's Midi Dresses",
+            country:"India",
+            manufacturer:"KPA Apparels Private Limited",
+            address:"1st Floor, C-134, Sector 63, Gautam Buddha Nagar, Uttar Pradesh-201301, Gautam Buddha Nagar, Uttar Pradesh, 201301",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/162949_ab223169c5d24c73bba1b62ef78539a5_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/162949_ab223169c5d24c73bba1b62ef78539a5_front_super_zoom.webp",
+            img2:"https://product.koovs.com/162949_ab223169c5d24c73bba1b62ef78539a5_back_super_zoom.webp",
+            img3:"https://product.koovs.com/162949_ab223169c5d24c73bba1b62ef78539a5_left_super_zoom.webp",
+        },
+        {
+            brand:"Oxolloxo",
+            name:"Abstract Print Drawcord Trousers",
+            price:760,
+            priceoff:"₹1899",
+            productcode:145780,
+            gender:"Women",
+            discount:"60",
+            category:"Dress",
+            material:"cotton polyester blend",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Trousers by Oxolloxo",
+            commodity:"Women's Trousers",
+            country:"India",
+            manufacturer:"KPA Apparels Private Limited",
+            address:"1st Floor, C-134, Sector 63, Gautam Buddha Nagar, Uttar Pradesh-201301, Gautam Buddha Nagar, Uttar Pradesh, 201301",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/162920_12c90eed39664e878a19bb3b6fb69e17_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/162920_12c90eed39664e878a19bb3b6fb69e17_front_super_zoom.webp",
+            img2:"https://product.koovs.com/162920_12c90eed39664e878a19bb3b6fb69e17_back_super_zoom.webp",
+            img3:"https://product.koovs.com/162920_12c90eed39664e878a19bb3b6fb69e17_left_super_zoom.webp",
+        },
+        {
+            brand:"Blue Saint",
+            name:"Graphic Slogan Print Round Neck T-Shirt",
+            price:280,
+            priceoff:"₹699",
+            productcode:139758,
+            gender:"Men",
+            discount:"60",
+            category:"T-Shirt",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"T-shirt by Blue Saint",
+            commodity:"Men's T-shirts",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/156806_2d563c3c1f6948dfbded3565fac24919_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/156806_2d563c3c1f6948dfbded3565fac24919_front_super_zoom.webp",
+            img2:"https://product.koovs.com/156806_2d563c3c1f6948dfbded3565fac24919_back_super_zoom.webp",
+            img3:"https://product.koovs.com/156806_2d563c3c1f6948dfbded3565fac24919_left_super_zoom.webp",
+        },
+        {
+            brand:"KOOVS",
+            name:"Slogan Placement Print T-Shirt",
+            price:350,
+            priceoff:"₹699",
+            productcode:149945,
+            gender:"Women",
+            discount:"50",
+            category:"T-Shirt",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"T-Shirt by KOOVS",
+            commodity:"Women's T-shirts",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/167158_dadc360065db496bba5050c430676f4a_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/167158_dadc360065db496bba5050c430676f4a_front_super_zoom.webp",
+            img2:"https://product.koovs.com/167158_dadc360065db496bba5050c430676f4a_back_super_zoom.webp",
+            img3:"https://product.koovs.com/167158_dadc360065db496bba5050c430676f4a_right_super_zoom.webp",
+        },
+        {
+            brand:"MERAKI",
+            name:"Solid Stripe Casual Top",
+            price:240,
+            priceoff:"₹799",
+            productcode:150999,
+            gender:"Women",
+            discount:"70",
+            category:"Top",
+            material:"100% Polyester",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Top by Meraki",
+            commodity:"Women's Tops",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/168217_27e8d76c6aa049e0b12c379749941943_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/168217_27e8d76c6aa049e0b12c379749941943_front_super_zoom.webp",
+            img2:"https://product.koovs.com/168217_27e8d76c6aa049e0b12c379749941943_back_super_zoom.webp",
+            img3:"https://product.koovs.com/168217_27e8d76c6aa049e0b12c379749941943_left_super_zoom.webp",
+        },
+        {
+            brand:"MERAKI",
+            name:"Colour Block Mini Shift Dress",
+            price:450,
+            priceoff:"₹1499",
+            productcode:151052,
+            gender:"Women",
+            discount:"70",
+            category:"Dress",
+            material:"100% Polyester",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Shift Dress by MERAKI",
+            commodity:"Women's Shift Dresses",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/168270_0475458a30714f2c92de82d6abd2c376_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/168270_0475458a30714f2c92de82d6abd2c376_front_super_zoom.webp",
+            img2:"https://product.koovs.com/168270_0475458a30714f2c92de82d6abd2c376_back_super_zoom.webp",
+            img3:"https://product.koovs.com/168270_0475458a30714f2c92de82d6abd2c376_left_super_zoom.webp",
+        },
+        {
+            brand:"Blue Saint",
+            name:"Cuffed Utility Pocket Jeans",
+            price:1000,
+            priceoff:"₹1999",
+            productcode:150107,
+            gender:"Men",
+            discount:"50",
+            category:"Jeans",
+            material:"98% Cotton 2% Elastene",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Jeans by Blue Saint",
+            commodity:"Men's Slim Jeans",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/167322_f9e67a3cd14045bdb3c8ecfd6f3a2ab3_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/167322_f9e67a3cd14045bdb3c8ecfd6f3a2ab3_front_super_zoom.webp",
+            img2:"https://product.koovs.com/167322_f9e67a3cd14045bdb3c8ecfd6f3a2ab3_back_super_zoom.webp",
+            img3:"https://product.koovs.com/167322_f9e67a3cd14045bdb3c8ecfd6f3a2ab3_left_super_zoom.webp",
+        },
+        {
+            brand:"KOOVS",
+            name:"Halter Neck Fringe Bodycon Dress",
+            price:2299,
+            priceoff:"₹4599",
+            productcode:150734,
+            gender:"Women",
+            discount:"10",
+            category:"Dress",
+            material:"100% Polyester",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Bodycon Dress by KOOVS",
+            commodity:"Women's Body Con Dresses",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/167952_2db5fea757e24b6dada247599a0bca41_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/167952_2db5fea757e24b6dada247599a0bca41_front_super_zoom.webp",
+            img2:"https://product.koovs.com/167952_2db5fea757e24b6dada247599a0bca41_back_super_zoom.webp",
+            img3:"https://product.koovs.com/167952_2db5fea757e24b6dada247599a0bca41_left_super_zoom.webp",
+        },
+        {
+            brand:"KOOVS",
+            name:"Graphic-Print Ribbed Neck Sweatshirt",
+            price:1999,
+            priceoff:"₹2199",
+            productcode:149711,
+            gender:"Men",
+            discount:"5",
+            category:"Shirt",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Sweatshirt by KOOVS",
+            commodity:"Men's Hoodies",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/166924_4dc329f305c4436bbf434a81efb5ba19_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/166924_4dc329f305c4436bbf434a81efb5ba19_front_super_zoom.webp",
+            img2:"https://product.koovs.com/166924_4dc329f305c4436bbf434a81efb5ba19_back_super_zoom.webp",
+            img3:"https://product.koovs.com/166924_4dc329f305c4436bbf434a81efb5ba19_left_super_zoom.webp",
+        },
+        {
+            brand:"KOOVS",
+            name:"Back Cut-Out Floral Print Slit Maxi Dress",
+            price:1999,
+            priceoff:"₹2199",
+            productcode:152288,
+            gender:"Women",
+            discount:"5",
+            category:"Dress",
+            material:"100% Cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Maxi Dress by KOOVS",
+            commodity:"Women's Maxi Dresses",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/169519_e2d2241f0c334920bf89a0c1f2b44c15_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/169519_e2d2241f0c334920bf89a0c1f2b44c15_front_super_zoom.webp",
+            img2:"https://product.koovs.com/169519_e2d2241f0c334920bf89a0c1f2b44c15_back_super_zoom.webp",
+            img3:"https://product.koovs.com/169519_e2d2241f0c334920bf89a0c1f2b44c15_left_super_zoom.webp",
+        },
+        {
+            brand:"Blue Saint",
+            name:"Distressed Mid Rise Skinny Jeans",
+            price:840,
+            priceoff:"₹2099",
+            productcode:152202,
+            gender:"Men",
+            discount:"30",
+            category:"Jeans",
+            material:"98% Cotton 2% Elastene",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Skinny Jeans by Realm",
+            commodity:"Men's Skinny Jeans",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/169424_8ed0501256324e5eb1cca22ffaa7ace1_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/169424_8ed0501256324e5eb1cca22ffaa7ace1_front_super_zoom.webp",
+            img2:"https://product.koovs.com/169424_8ed0501256324e5eb1cca22ffaa7ace1_back_super_zoom.webp",
+            img3:"https://product.koovs.com/169424_8ed0501256324e5eb1cca22ffaa7ace1_left_super_zoom.webp",
+        },
+        {
+            brand:"Oxolloxo",
+            name:"Blue Wave Printed Women's Crop Top",
+            price:1399,
+            priceoff:"₹1999",
+            productcode:154637,
+            gender:"Women",
+            discount:"30",
+            category:"Top",
+            material:"Polyester",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Blue Wave Printed Women'S Crop Top",
+            commodity:"Women's Crop Tops",
+            country:"India",
+            manufacturer:"KPA Apparels Private Limited",
+            address:"1st Floor, C-134, Sector 63, Gautam Buddha Nagar, Uttar Pradesh-201301, Gautam Buddha Nagar, Uttar Pradesh, 201301",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/171890_7cfef04eaddf486da21bd59b57977727_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/171890_7cfef04eaddf486da21bd59b57977727_front_super_zoom.webp",
+            img2:"https://product.koovs.com/171890_7cfef04eaddf486da21bd59b57977727_back_super_zoom.webp",
+            img3:"https://product.koovs.com/171890_7cfef04eaddf486da21bd59b57977727_left_super_zoom.webp",
+        },
+        {
+            brand:"MERAKI",
+            name:"Essential All Over Print Top",
+            price:300,
+            priceoff:"₹999",
+            productcode:151748,
+            gender:"Women",
+            discount:"70",
+            category:"Top",
+            material:"100% Polyester",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Top by MERAKI",
+            commodity:"Women's Tops",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/168970_cd6ddf376b0a47b585dafe122f80164c_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/168970_cd6ddf376b0a47b585dafe122f80164c_front_super_zoom.webp",
+            img2:"https://product.koovs.com/168970_cd6ddf376b0a47b585dafe122f80164c_back_super_zoom.webp",
+            img3:"https://product.koovs.com/168970_cd6ddf376b0a47b585dafe122f80164c_left_super_zoom.webp",
+        },
+        {
+            brand:"Oxolloxo",
+            name:" All Over Checkered Printed Shirt",
+            price:990,
+            priceoff:"₹2199",
+            productcode:150448,
+            gender:"Men",
+            discount:"55",
+            category:"Shirt",
+            material:"100% cotton",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Casual Shirt by Oxolloxo ",
+            commodity:"Men's Casual Shirts",
+            country:"India",
+            manufacturer:"KPA Apparels Private Limited",
+            address:"1st Floor, C-134, Sector 63, Gautam Buddha Nagar, Uttar Pradesh-201301, Gautam Buddha Nagar, Uttar Pradesh, 201301",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/167666_79e04e6b0d534c00b26548807f7bf8ce_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/167666_79e04e6b0d534c00b26548807f7bf8ce_front_super_zoom.webp",
+            img2:"https://product.koovs.com/167666_79e04e6b0d534c00b26548807f7bf8ce_back_super_zoom.webp",
+            img3:"https://product.koovs.com/167666_79e04e6b0d534c00b26548807f7bf8ce_left_super_zoom.webp",
+        },
+        {
+            brand:"Blue Saint",
+            name:"Mid Wash Skinny Jeans",
+            price:909,
+            priceoff:"₹1299",
+            productcode:140108,
+            gender:"Men",
+            discount:"30",
+            category:"Jeans",
+            material:"98% Cotton 2% Elastene",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Jeans by Blue Saint",
+            commodity:"Men's Skinny Jeans",
+            country:"India",
+            manufacturer:"Blue Saint",
+            address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/157165_687d0ce7b8874b6f905f51dc9db14d52_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/157165_687d0ce7b8874b6f905f51dc9db14d52_front_super_zoom.webp",
+            img2:"https://product.koovs.com/157165_687d0ce7b8874b6f905f51dc9db14d52_back_super_zoom.webp",
+            img3:"https://product.koovs.com/157165_687d0ce7b8874b6f905f51dc9db14d52_left_super_zoom.webp",
+        },
+        {
+            brand:"Oxolloxo",
+            name:"Paisley Me Women's Shift Dress",
+            price:1329,
+            priceoff:"₹1899",
+            productcode:154664,
+            gender:"Women",
+            discount:"30",
+            category:"Dress",
+            material:"Polyester",
+            size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
+            description:"Paisley Me Women'S Shift Dress",
+            commodity:"Women's Shift Dresses",
+            country:"India",
+            manufacturer:"KPA Apparels Private Limited",
+            address:"1st Floor, C-134, Sector 63, Gautam Buddha Nagar, Uttar Pradesh-201301, Gautam Buddha Nagar, Uttar Pradesh, 201301",
+            support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
+            displayimg:"https://product.koovs.com/171917_0ba638c9de384e099e28768cdeb6cab0_image1_super_zoom.webp",
+            img1:"https://product.koovs.com/171917_0ba638c9de384e099e28768cdeb6cab0_front_super_zoom.webp",
+            img2:"https://product.koovs.com/171917_0ba638c9de384e099e28768cdeb6cab0_back_super_zoom.webp",
+            img3:"https://product.koovs.com/171917_0ba638c9de384e099e28768cdeb6cab0_left_super_zoom.webp",
+        },
+    ]
+    
+    
+        let parent=document.getElementById("products");
+        
+        
+
+        function displayproducts(details) {
+
+            parent.innerHTML="";
+            details.forEach(function (el) {
+                let brand=el.brand;
+                let name=el.name;
+                let price=el.price;
+                let productcode=el.productcode;
+                let gender=el.gender;
+                let discount=el.discount;
+                let category=el.category;
+                let material=el.material;
+                let size=el.size;
+                let description=el.description;
+                let commodity=el.commodity;
+                let country=el.country;
+                let manufacturer=el.manufacturer;
+                let address=el.address;
+                let support=el.support;
+                let displayimg=el.displayimg;
+                let img1=el.img1;
+                let img2=el.img2;
+                let img3=el.img3;
+                let priceoff=el.priceoff;
+                let images=[img1, img2, img3];
+
+                
+                let maindiv=document.createElement("div");
+                let div=document.createElement("div");
+                let div1=document.createElement("div");
+                let brandname=document.createElement("h3");
+                let productname=document.createElement("p");
+                let productprice=document.createElement("h3");
+                let productdiscount=document.createElement("h3");
+                let originalprice=document.createElement("p"); 
+                let addtobagbtn=document.createElement("button");
+                let quickviewbtn=document.createElement("button");
+
+                let img=document.createElement("img");
+                img.src=displayimg;
+                div.className="one";
+                div1.className="two";
+                brandname.innerText=brand;
+                brandname.style.marginTop=10+"px";
+                productname.innerText=name;
+                productprice.style.display="inline-block";
+                productprice.innerText="₹"+price;
+                productdiscount.style.fontSize=16+"px";
+                productprice.style.fontSize=16+"px";
+                productdiscount.style.marginLeft=10+"px";
+                productdiscount.style.display="inline-block";
+                productdiscount.innerText=discount+"% OFF";
+                productdiscount.style.color="#FB0D00";
+                originalprice.innerText=priceoff;
+                originalprice.style.display="inline-block";
+                originalprice.style.textDecoration="line-through"
+                originalprice.style.marginLeft=10+"px";
+                originalprice.style.fontSize=10+"px";
+                addtobagbtn.innerText="ADD TO BAG";
+                quickviewbtn.innerText="QUICK VIEW";
+                addtobagbtn.style.width="50%";
+                quickviewbtn.style.width="50%";  
+                addtobagbtn.style.height="30%";
+                quickviewbtn.style.height="30%";
+                addtobagbtn.style.border="none";
+                quickviewbtn.style.border="none";
+                addtobagbtn.style.backgroundColor="black";
+                quickviewbtn.style.backgroundColor="grey";
+                addtobagbtn.style.color="white";
+                quickviewbtn.style.color="white";
+                addtobagbtn.style.fontWeight="bold";
+                quickviewbtn.style.fontWeight="bold";
+
+
+
+                div.onmouseenter=function(){
+                    let counter=0;
+                    var interval=setInterval(function() {
+                       
+                        img.src=images[counter++]
+                        if(counter==3) {
+                            counter=0;
+                        }
+                        
+                    },1000);
+                    div.onmouseleave=function() {
+
+                        clearInterval(interval);
+                          }        
+                }
+
+
+
+                div.append(img);
+                div1.append(addtobagbtn,quickviewbtn,brandname,productname,productprice,originalprice,productdiscount);
+                maindiv.append(div,div1);
+
+                parent.append(maindiv)
+
+
+            });
+        }
+
+
+        displayproducts(details);
+        let menscount=0;
+        let womencount=0;
+        let prod=document.getElementById("productscount");
+        function mensort() {
+            console.log(menscount)
+            if(menscount%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].gender=="Men") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            menscount++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            menscount++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+        }
+
+        function womensort() {
+            console.log(womencount);
+            if(womencount%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].gender=="Women") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            womencount++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            womencount++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+        }
+
+        function vala() {
+            let sort=document.getElementById("sortby");
+            if(sort.value=="Relevance") {
+                dummys();
+            } else if(sort.value=="What's New") {
+                dummys();
+            } else if(sort.value=="Price Low to High") {
+                sortLH();
+            } else if(sort.value=="Price High to Low") {
+                sortHL();
+            } else if(sort.value=="Discount High to Low") {
+                sortDHL();
+            }
+        }
+        function dummys() {
+            displayproducts(details1);
+        }
+        function sortLH() {
+         let arr=details.sort(function(a,b) {
+          return a.price - b.price;
+          });
+          displayproducts(arr);
+         }
+
+        function sortHL() {
+        let arr=details.sort(function(a,b){
+           return b.price - a.price;
+        });
+        displayproducts(arr);
+         }
+        
+         function sortDHL() {
+        let arr=details.sort(function(a,b){
+           return b.discount - a.discount;
+        });
+        displayproducts(arr);
+         }
+    </script>
+</body>
+</html>
