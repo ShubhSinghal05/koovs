@@ -236,46 +236,46 @@
                 <input type="search" placeholder="Search in brand" id="searchbox">
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="brand1sort()" class="checkboxsize">
                 <label>Blue Saint</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="brand2sort()" class="checkboxsize">
                 <label>Oxolloxo</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="brand3sort()" class="checkboxsize">
                 <label>KOOVS</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="brand4sort()" class="checkboxsize">
                 <label>MERAKI</label>
             </div>
             <button onclick="dummys1()">VIEW ALL</button>
             <h4>PRICE RANGE</h4>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="pricerange1sort()" class="checkboxsize">
                 <label>Rs.200 - 500(155)</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="pricerange2sort()" class="checkboxsize">
                 <label>Rs.501 - 900(56)</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="pricerange3sort()" class="checkboxsize">
                 <label>Rs.900 - 2599(218)</label>
             </div>
             <h4>DISCOUNT</h4>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="discount1sort()" class="checkboxsize">
                 <label>0% - 29%(41)</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="discount2sort()" class="checkboxsize">
                 <label>30% - 59%(5)</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="discount3sort()" class="checkboxsize">
                 <label>60% - 89%(23)</label>
             </div>
             </div>
@@ -1372,6 +1372,16 @@ let details1=[
             jeanscount=0;
             tshirtcount=0;
             dresscount=0;
+            brand1count=0;
+            brand2count=0;
+            brand3count=0;
+            brand4count=0;
+            pricerange1=0;
+            pricerange2=0;
+            pricerange3=0;
+            discount1=0;
+            discount2=0;
+            discount3=0;
             displayproducts(details1);
             prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
         }
@@ -1499,6 +1509,217 @@ let details1=[
         }
          }
 
+
+
+         let brand1count=0;
+         function brand1sort() {
+            if(brand1count%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].brand=="Blue Saint") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            brand1count++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            brand1count++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         
+         let brand2count=0;
+         function brand2sort() {
+            if(brand2count%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].brand=="Oxolloxo") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            brand2count++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            brand2count++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let brand3count=0;
+         function brand3sort() {
+            if(brand3count%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].brand=="KOOVS") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            brand3count++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            brand3count++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let brand4count=0;
+         function brand4sort() {
+            if(brand4count%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].brand=="KOOVS") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            brand4count++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            brand4count++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let pricerange1=0;
+         function pricerange1sort() {
+            if(pricerange1%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if((details[i].price>=200) && (details[i].price<=500)) {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            pricerange1++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            pricerange1++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let pricerange2=0;
+         function pricerange2sort() {
+            if(pricerange2%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if((details[i].price>=501) && (details[i].price<=900)) {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            pricerange2++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            pricerange2++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let pricerange3=0;
+         function pricerange3sort() {
+            if(pricerange3%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if((details[i].price>=900) && (details[i].price<=2599)) {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            pricerange3++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            pricerange3++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let discount1=0;
+         function discount1sort() {
+            if(discount1%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if((details[i].discount>=0) && (details[i].discount<=29)) {
+                    console.log("Yes");
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            discount1++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            discount1++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let discount2=0;
+         function discount2sort() {
+            if(discount2%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if((details[i].discount>=30) && (details[i].discount<=59)) {
+                    console.log("Yes");
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            discount2++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            discount2++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let discount3=0;
+         function discount3sort() {
+            if(discount3%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if((details[i].discount>=60) && (details[i].discount<=89)) {
+                    console.log("Yes");
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            discount3++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            discount3++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
     </script>
 </body>
 </html>
