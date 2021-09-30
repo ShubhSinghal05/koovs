@@ -18,10 +18,11 @@
         #maincontainer {
             display: grid;
             grid-template-rows:60px 100%;
-            border: 2px solid red;
+            /* border: 2px solid red; */
         }
         #topnavbar {
             background-color:white;
+            border-bottom: 1px solid #CFD8DC;
             display: grid;
             grid-template-columns:100%;
             grid-template-rows:60px;
@@ -34,11 +35,11 @@
             display:flex;
         }
         #topnavbar > div:nth-child(1) > div:nth-child(1) {
-            border:1px solid red;
+            /* border:1px solid red; */
             flex-basis: 40%;
         }
         #topnavbar > div:nth-child(1) > div:nth-child(2) {
-            border:1px solid red;
+            /* border:1px solid red; */
             flex-basis: 20%;
         }
         #topnavbar > div:nth-child(1) > div:nth-child(2) > img {
@@ -46,7 +47,7 @@
             margin-top: 16px;
         }
         #topnavbar > div:nth-child(1) > div:nth-child(3) {
-            border:1px solid red;
+            /* border:1px solid red; */
             flex-basis: 40%;
         }
         #mainsection {
@@ -54,7 +55,7 @@
             grid-template-columns: 18% 82%;
         }
         #leftsection {
-            border:1px solid red;
+            /* border:1px solid red; */
             padding-left: 10%;
             padding-top: 15px;
         }
@@ -66,7 +67,6 @@
             margin-bottom:5px
         }
         #leftsection input.checkboxsize {
-            border:1px solid red;
             width:26px;
             height:26px;
             color:green;
@@ -81,7 +81,7 @@
             color:#545454;
         }
         #rightsection {
-            border:1px solid red;
+            /* border:1px solid red; */
             display: grid;
             grid-template-rows: 50px 100%;
         }
@@ -111,7 +111,7 @@
         #products {
             display: grid;
             grid-template-columns: repeat(5,18%);
-            grid-template-rows: repeat(9,385px);
+            grid-template-rows: repeat(4,385px);
             gap: 25px;
         }
         #products > div {
@@ -135,7 +135,7 @@
             font-size:1%;
         }
         .two {
-            top: -51.5px;
+            top: -51.2px;
             height:160px;
             position: relative;
             z-index: 0;
@@ -173,6 +173,67 @@
             margin-left: 85%;
             display: inline-block;
         }
+        #searchnavbar {
+            width:100%;
+            border: none;
+            padding-left:10px;
+            height:25px;
+            border-bottom: 1px solid #CFD8DC;
+        }
+        #searchnavbar:focus {
+            border-bottom: 1px solid #CFD8DC;
+        }
+        #rightnavbaricons {
+            display: flex;
+        }
+        #rightnavbaricons > div:nth-child(1) {
+            margin-left: 43%;
+            flex-basis: 32%;
+            margin-top: 15px;
+        }
+        #rightnavbaricons > div:nth-child(2) {
+            flex-basis: 6%;
+            position: relative;
+            left:-15px;
+            margin-top: 18px;
+        }
+        #rightnavbaricons > div:nth-child(3) {
+            margin-top: 5px;
+            flex-basis: 10%;
+        }
+        #rightnavbaricons > div:nth-child(4) {
+            margin-top: 5px;
+            flex-basis: 7%;
+        }
+        #rightnavbaricons > div:nth-child(3) > p {
+            font-size:10px;
+            color:gray;
+            position: relative;
+            left:-5px;
+        }
+        #rightnavbaricons > div:nth-child(4) > p {
+            font-size:10px;
+            margin-left: 4px;
+            color:gray;
+        }
+        .material-icons-outlined {
+            font-size:20px;
+        }
+        .iconsize {
+            font-size:28px;
+        }
+        a:link {
+        color: black;
+        }
+        a:visited {
+        color: black;
+        }
+        a:hover {
+        color: black;
+        }
+        a:active {
+        color: black;
+        }
     </style>
 </head>
 <body>
@@ -189,10 +250,32 @@
                 <div>
                     <img src="https://images.koovs.com/uploads/koovs/logo.png">
                 </div>
+                <div id="rightnavbaricons">
+                    <div>
+                    <input id="searchnavbar" type="text" placeholder="Search for products,brands">
+                </div>
                 <div>
                     <span class="material-icons-outlined">
+                        search
+                        </span>         
+                </div>
+                <div>
+                    <a href="example.html"> 
+                    <span class="material-icons-outlined iconsize">
                         favorite_border 
-                        </span></span>
+                        </span>
+                    </a>
+                        <p>WISHLIST</p>
+                    </div>
+                   <div>
+                    <a href="example.html"> 
+                        <span class="material-icons-outlined iconsize">
+                            local_mall
+                            </span>
+                        </a>
+                            <p>BAG</p>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -1265,6 +1348,32 @@ let details1=[
                 addtobagbtn.style.fontWeight="bold";
                 quickviewbtn.style.fontWeight="bold";
 
+                quickviewbtn.onclick=function() {
+                    window.location.href="example.html";
+                }
+
+
+
+                addtobagbtn.onclick=function() {
+                    console.log("Yes")
+                 let presentitems=JSON.parse(localStorage.getItem("KoovsCart"));
+                 let bagcount=0;
+                 console.log(presentitems);
+                  presentitems.forEach(function (items) {
+                   
+                  if(items.name==el.name) {
+                    bagcount++;
+                   }
+                  }); 
+                  if(bagcount==1) {
+                     alert("Already in Cart");
+                 } else {
+                     addtobag(el);
+                  }   
+                  }
+
+
+
 
 
                 div.onmouseenter=function(){
@@ -1294,6 +1403,18 @@ let details1=[
 
             });
         }
+
+        if(localStorage.getItem("KoovsCart")===null) {
+            localStorage.setItem("KoovsCart",JSON.stringify([]))
+        }
+        function addtobag(p) {
+            
+        let products_cart=JSON.parse(localStorage.getItem("KoovsCart"));
+        products_cart.push(p);
+
+        localStorage.setItem("KoovsCart",JSON.stringify(products_cart));
+            }
+
 
 
         displayproducts(details);
