@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koovs</title>
+    <link rel="icon" href="https://images.koovs.com/uploads/koovs/kv-favicon.ico"> 
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+       
+.navbar-mid{
+            text-align: center;
+
+           
+         }
+   .cursor{
+    cursor: pointer;
+   }      
+ .hline{
+            width: 100%;
+           border: 2px solid rgb(230, 224, 224);
+      } 
+ .cart-mid-top{
+           display: flex;
+           align-items: center;
+           margin-left: 18%;
+       }  
+.cart-mid-top div{
+           margin: 1%;
+           font-weight: 900;
+           width: auto;
+       }
+.hline-mid{
+           width: 20%;
+           height: 2px;
+           background-color: black;
+
+        }
+        .txt-lightwt{
+            color: lightgray;
+            font-size: 20px;
+        }   
+img{
+    width: 100%;
+}
+
+#promo{
+    width: 33%;
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+    border: none;
+    padding: 9px;
+}
+#inpbox{
+    width: 65%;
+    padding: 9px;
+}
+.promo-code{
+    display: flex;
+}
+.sh-amt{
+    width: 60%;
+   
+    
+}
+
+.cart-amt,.item-no{
+    width: 100%;
+    align-items: center;
+
+    display: flex;
+    justify-content:space-evenly;
+}
+
+#container{
+    width: 85%;
+    margin: 2% auto;
+    display: flex;
+    border: 1px solid black;
+}
+.products-container{
+            width:60%;
+
+            margin-right: 135px;
+            border: 1px solid black;
+            display: inline-block;
+            justify-content: right;
+}
+#products{
+    width: 95%;
+     height: 120px;
+     border: 1px solid lightgray;
+}
+#product-img{
+    width: 20%;
+}
+.subtotal{
+    width: 40%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+   
+}
+
+#checkout{
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    font-size: 16px;
+}.txt-bold{
+    font-weight: 700;
+}
+.foot-img{
+    width: 60px;
+    height: 60px;
+    margin: 0 5%;
+}
+#cart-footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 4% ;
+}
+.cart-footer-top{
+    display: flex;
+    align-items: center;
+}
+.cart-footer-bottom{
+    text-align: center;
+}
+.hline-bottom{
+    width: 100%;
+ border: 1px solid rgb(230, 224, 224);
+
+}
+    </style>
+</head>
+<body>
+    <div class="navbar-mid">
+        <h1 class="cursor">KOOVS.COM</h1>
+           
+    </div>
+    <div class="hline"></div>
+
+    <div class="cart-mid-top">
+        
+        <div class="cursor"><h3>MY BAG</h3> </div>
+        <p class="hline-mid">
+
+        </p>
+        <div><p class="txt-lightwt">ORDER SUMMARY </p> </div>
+        <p class="hline-mid"></p>
+        <div><p class="txt-lightwt">PAYMENT</p> </div>
+    </div>
+     <div class="heading-mid">
+        
+
+     </div>
+    <div id="container">
+
+            <div class="products-container">
+                <span id="qty"></span>
+                <span >Items</span>
+                <div id="products">
+                   <div id="product-img"></div>
+                   <div id="product-details">
+                       <span id="brand"></span>
+                       <span id="name"></span>
+                   </div>
+                   <span>size</span>
+                   <span>
+                       <select name="" id="select-size">
+                           <option value="S">S</option>
+                           <option value="M">M</option>
+                           <option value="L">L</option>
+                           <option value="XL">XL</option>
+                       </select>
+                   </span>
+                   <span>QTY</span>
+                </div>
+            </div>
+        
+
+
+         <div class="subtotal">
+            <p class="txt-bold">PROMO CODE</p>
+
+            <div class="promo-code">
+                  <input id="inpbox" type="text" placeholder="Please enter here">
+                   <button id="promo">APPLY</button>
+             </div>
+
+           <div class="sh-amt">
+          
+            <p class="txt-bold">OFFER</p>
+            <p class="txt-bold">PRICE SUMMARY</p>
+            <div class="cart-amt">
+                <div>
+                    <p class="txt-bold">BAG TOTAL</p>
+                    <p>SHIPPING CHARGES</p>
+                    <p>APPLICABLE TAXES AND CHARGES</p>
+                    <p class="txt-bold" >TOTAL PAYABLE </p>
+                    <h5><small>PRICES INCLUSIVE OF ALL TAXES</small> </h5>
+                </div>
+                
+
+                 <div>
+                    <div id="total"></div>
+                 </div>
+                
+            </div>
+
+
+        </div>
+             
+        <button id="checkout">PROCEED TO CHECKOUT</button>
+
+    </div>
+    </div>
+    <div class="hline-bottom"></div>
+
+   <div id="cart-footer">
+
+       <div class="cart-footer-top">
+           <img class="foot-img"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7LuzLQWSQ59z6s7Limu4wPnJf_CP0JYguKQ&usqp=CAU" alt="">
+           <div class="foot-txt">
+               <p>  SECURE SHOPPING</p>
+               <p>Safe spending with ssl technology</p>
+           </div>
+       </div>
+       <div class="cart-footer-top" >
+        <img class="foot-img" src="https://portals.clarity-ventures.com/portals/0/images/articleimgs/shopping%20cart%20security/securecart.png">
+        <div class="foot-txt">
+            <p>  FREE RETURNS</p>
+            <p >Not quite right? no worries sent it back for free</p>
+        </div>
+    </div>
+    <div class="cart-footer-top" >
+        <img class="foot-img" src="https://banner2.cleanpng.com/20180613/zeh/kisspng-paypal-payment-credit-card-american-express-servic-bronze-cross-5b20e76d6749e2.9754011415288830534231.jpg">
+        <div>
+            <p class="foot-txt">ALL PAYMENT OPTIONS</p>
+            <p>Multiple payment options availableology</p>
+        </div>
+    </div>
+   </div>
+   <div class="hline-bottom"></div>
+   <div class="cart-footer-bottom">
+       <p>KOOVS.COM © 2021 | All Rights Reserved</p>
+   </div>
+</body>
+</html>
+    <script>
+            let inpbox1=document.getElementById("inpbox");
+
+        let parent=document.getElementById("products");
+        let productImg=document.getElementById("product-img")
+        let productDetails=document.getElementById('product-details')
+        let productSize=document.getElementById("select-size")
+
+        let qty=document.getElementById("qty");
+        let promo=document.getElementById("promo");
+        let div2=document.createElement("div");
+        let checkout=document.getElementById("checkout");
+        
+       // checkout.innerText="checkout"
+        checkout.onclick=function(){window.location.href="OrderSummary.html"}
+        checkout.style.cursor="pointer"
+        promo.onclick=function(){applypromo()}
+        promo.style.cursor="pointer"
+                    var c=0;
+let cart=JSON.parse(localStorage.getItem("KoovsCart"));
+
+function showProduct(){
+  cart.forEach(function(product){
+      c++;
+      qty.innerHTML=c
+      console.log(product.name)
+      let div= document.createElement('div')
+      let div3=document.createElement('div')
+      let img=document.createElement('img')
+      img.src=product.displayimg;
+      let  product_price=document.createElement("p")
+      product_price.textContent=product.price
+      
+      let product_name=document.createElement('p')
+      product_name.textContent=product.name
+      div.append(img)
+      div3.append(div)
+      productImg.append(img)
+      parent.append(div3)
+      div3.style.width="100%"
+      div3.style.height="30px"
+      parent.style.border="1px solid black"
+    })
+}
+showProduct()
+//total sum in the cart
+//console.log(inpbox1.value)
+var total=cart.reduce(function(ac,el){ 
+    
+    return ac+ Number(el.price)
+   },0)
+   var total_pr=document.getElementById("total")
+   total_pr.innerHTML=total
+
+console.log(total)
+function applypromo(){
+
+    if(inpbox1.value=="masai30"){
+        total=total-((30*total)/100)
+        total_pr.innerHTML=total
+    }
+}
+
+    </script>
