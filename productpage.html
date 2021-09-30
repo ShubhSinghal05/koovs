@@ -18,10 +18,12 @@
         #maincontainer {
             display: grid;
             grid-template-rows:60px 100%;
-            border: 2px solid red;
+            /* border: 2px solid red; */
         }
+        
         #topnavbar {
             background-color:white;
+            border-bottom: 1px solid #CFD8DC;
             display: grid;
             grid-template-columns:100%;
             grid-template-rows:60px;
@@ -34,11 +36,11 @@
             display:flex;
         }
         #topnavbar > div:nth-child(1) > div:nth-child(1) {
-            border:1px solid red;
+            /* border:1px solid red; */
             flex-basis: 40%;
         }
         #topnavbar > div:nth-child(1) > div:nth-child(2) {
-            border:1px solid red;
+            /* border:1px solid red; */
             flex-basis: 20%;
         }
         #topnavbar > div:nth-child(1) > div:nth-child(2) > img {
@@ -46,7 +48,7 @@
             margin-top: 16px;
         }
         #topnavbar > div:nth-child(1) > div:nth-child(3) {
-            border:1px solid red;
+            /* border:1px solid red; */
             flex-basis: 40%;
         }
         #mainsection {
@@ -54,7 +56,7 @@
             grid-template-columns: 18% 82%;
         }
         #leftsection {
-            border:1px solid red;
+            /* border:1px solid red; */
             padding-left: 10%;
             padding-top: 15px;
         }
@@ -66,7 +68,6 @@
             margin-bottom:5px
         }
         #leftsection input.checkboxsize {
-            border:1px solid red;
             width:26px;
             height:26px;
             color:green;
@@ -81,7 +82,7 @@
             color:#545454;
         }
         #rightsection {
-            border:1px solid red;
+            /* border:1px solid red; */
             display: grid;
             grid-template-rows: 50px 100%;
         }
@@ -111,7 +112,7 @@
         #products {
             display: grid;
             grid-template-columns: repeat(5,18%);
-            grid-template-rows: repeat(9,385px);
+            grid-template-rows: repeat(4,385px);
             gap: 25px;
         }
         #products > div {
@@ -135,7 +136,7 @@
             font-size:1%;
         }
         .two {
-            top: -51.5px;
+            top: -51.2px;
             height:160px;
             position: relative;
             z-index: 0;
@@ -160,6 +161,7 @@
         #searchbox {
             height:30px;
             font-size:15px;
+            width:80%;
             padding-left: 10px;
             margin-bottom: 5px;
         }
@@ -173,6 +175,192 @@
             margin-left: 85%;
             display: inline-block;
         }
+        #searchnavbar {
+            width:82%;
+            border: none;
+            padding-left:5px;
+            height:25px;
+            border-bottom: 1px solid #CFD8DC;
+        }
+        #searchnavbar:focus {
+            border-bottom: 1px solid #CFD8DC;
+        }
+        #rightnavbaricons {
+            display: flex;
+        }
+        #rightnavbaricons > div:nth-child(1) {
+            margin-left: 43%;
+            flex-basis: 32%;
+            margin-top: 15px;
+        }
+        #rightnavbaricons > div:nth-child(2) {
+            flex-basis: 6%;
+            position: relative;
+            left:-15px;
+            margin-top: 18px;
+        }
+        #rightnavbaricons > div:nth-child(3) {
+            margin-top: 5px;
+            flex-basis: 10%;
+        }
+        #rightnavbaricons > div:nth-child(4) {
+            margin-top: 5px;
+            flex-basis: 7%;
+        }
+        #rightnavbaricons > div:nth-child(3) > p {
+            font-size:10px;
+            color:gray;
+            position: relative;
+            left:-5px;
+        }
+        #rightnavbaricons > div:nth-child(4) > p {
+            font-size:10px;
+            margin-left: 4px;
+            color:gray;
+        }
+        .material-icons-outlined {
+            font-size:20px;
+        }
+        .iconsize {
+            font-size:28px;
+        }
+        a:link {
+        color: black;
+        }
+        a:visited {
+        color: black;
+        }
+        a:hover {
+        color: black;
+        }
+        a:active {
+        color: black;
+        }
+
+
+
+        @media (max-width: 1050px) {
+
+            #products {
+        display: grid;
+        grid-template-columns: repeat(3,30%);
+        grid-template-rows: repeat(7,11.2%);
+        gap: 25px;
+        }
+        .navbardivs > div:nth-child(4) {
+                display: none;
+            }
+            .navbardivs > div:nth-child(5) {
+                display: none;
+            }
+            #sortby {
+                 margin-left:70%;
+             }
+             #searchbox {
+                 width:90%;
+             }
+
+
+        }
+
+
+
+
+
+
+        @media (max-width: 790px) {
+            #mainsection {
+            display: grid;
+            grid-template-columns:82%;
+        }
+        
+        #products {
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(10,8%);
+        gap: 25px;
+        }
+        #leftsection {
+            /* border:1px solid red; */
+            display:none;
+            }
+            #rightsection {
+            /* border:1px solid red; */
+            display: grid;
+            grid-template-rows: 80px 100%;
+            margin-left:14%;
+            }
+            #searchnavbar {
+                display: none;
+            }
+            .searchicondisable {
+                display: none;
+            }
+            .navbardivs > div:nth-child(3) {
+                display: none;
+            }
+            .navbardivs > div:nth-child(4) {
+                display: none;
+            }
+            .navbardivs > div:nth-child(5) {
+                display: none;
+            }
+            .navbaroptions {
+                width: 100%;
+            }
+            .navbardivs > div:nth-child(1) {
+            width: 15%;
+            }
+            .navbardivs > div:nth-child(2) {
+                width: 15%;
+            }
+
+    }
+
+
+        @media (max-width: 480px) {
+        
+            
+            #products {
+            display: grid;
+            grid-template-columns: repeat(1,110%);
+            grid-template-rows: repeat(20,4.1%);
+            }
+            #mainsection {
+            width: 100%;
+            }
+            #leftsection {
+            /* border:1px solid red; */
+            display:none;
+            }
+            #rightsection {
+            /* border:1px solid red; */
+            display: grid;
+            grid-template-rows: 80px 100%;
+            margin-left: 15%;
+            }
+            .navbardivs {
+                display: none;
+            }
+            #searchnavbar {
+                display: none;
+            }
+            .searchicondisable {
+                display: none;
+            }
+            #rightnavbaricons > div:nth-child(3) {
+            margin-left: 35%;
+           
+             }
+             #sortby {
+                 margin-top: 20px;
+                 margin-left:50%;
+             }
+
+        }
+
+        
+
     </style>
 </head>
 <body>
@@ -184,15 +372,36 @@
                     <div class="navbaroptions"><p>WOMEN</p></div>
                     <div class="navbaroptions"><p>THE BLOG</p></div>
                     <div class="navbaroptions"><p>KOOVSXYOU</p></div>
-                    <div class="navbaroptions"><p>IN STYLE OF</p></div>
                 </div>
                 <div>
                     <img src="https://images.koovs.com/uploads/koovs/logo.png">
                 </div>
-                <div>
+                <div id="rightnavbaricons">
+                    <div>
+                    <input id="searchnavbar" type="text" placeholder="Search for products,brands">
+                </div>
+                <div class="searchicondisable">
                     <span class="material-icons-outlined">
+                        search
+                        </span>         
+                </div>
+                <div>
+                    <a href="example.html"> 
+                    <span class="material-icons-outlined iconsize">
                         favorite_border 
-                        </span></span>
+                        </span>
+                    </a>
+                        <p>WISHLIST</p>
+                    </div>
+                   <div>
+                    <a href="example.html"> 
+                        <span class="material-icons-outlined iconsize">
+                            local_mall
+                            </span>
+                        </a>
+                            <p>BAG</p>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -211,67 +420,71 @@
             </div>
             <h4>CATEGORY</h4>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="topssort()" class="checkboxsize">
                 <label>Tops</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="shirtsort()" class="checkboxsize">
                 <label>Shirts</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="jeanssort()" class="checkboxsize">
                 <label>Jeans</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="tshirtsort()" class="checkboxsize">
                 <label>T-Shirt</label>
             </div>
-            <button>VIEW ALL</button>
+            <div>
+                <input type="checkbox" onchange="dresssort()" class="checkboxsize">
+                <label>Dress</label>
+            </div>
+            <button onclick="dummys1()">VIEW ALL</button>
             <h4>BRANDS</h4>
             <div>
                 <input type="search" placeholder="Search in brand" id="searchbox">
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="brand1sort()" class="checkboxsize">
                 <label>Blue Saint</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="brand2sort()" class="checkboxsize">
                 <label>Oxolloxo</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="brand3sort()" class="checkboxsize">
                 <label>KOOVS</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="brand4sort()" class="checkboxsize">
                 <label>MERAKI</label>
             </div>
-            <button>VIEW ALL</button>
+            <button onclick="dummys1()">VIEW ALL</button>
             <h4>PRICE RANGE</h4>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="pricerange1sort()" class="checkboxsize">
                 <label>Rs.200 - 500(155)</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="pricerange2sort()" class="checkboxsize">
                 <label>Rs.501 - 900(56)</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="pricerange3sort()" class="checkboxsize">
                 <label>Rs.900 - 2599(218)</label>
             </div>
             <h4>DISCOUNT</h4>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="discount1sort()" class="checkboxsize">
                 <label>0% - 29%(41)</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="discount2sort()" class="checkboxsize">
                 <label>30% - 59%(5)</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxsize">
+                <input type="checkbox" onchange="discount3sort()" class="checkboxsize">
                 <label>60% - 89%(23)</label>
             </div>
             </div>
@@ -414,7 +627,7 @@ let details=[
             productcode:145780,
             gender:"Women",
             discount:"60",
-            category:"Dress",
+            category:"Jeans",
             material:"cotton polyester blend",
             size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
             description:"Trousers by Oxolloxo",
@@ -1261,6 +1474,32 @@ let details1=[
                 addtobagbtn.style.fontWeight="bold";
                 quickviewbtn.style.fontWeight="bold";
 
+                quickviewbtn.onclick=function() {
+                    window.location.href="example.html";
+                }
+
+
+
+                addtobagbtn.onclick=function() {
+                    console.log("Yes")
+                 let presentitems=JSON.parse(localStorage.getItem("KoovsCart"));
+                 let bagcount=0;
+                 console.log(presentitems);
+                  presentitems.forEach(function (items) {
+                   
+                  if(items.name==el.name) {
+                    bagcount++;
+                   }
+                  }); 
+                  if(bagcount==1) {
+                     alert("Already in Cart");
+                 } else {
+                     addtobag(el);
+                  }   
+                  }
+
+
+
 
 
                 div.onmouseenter=function(){
@@ -1291,8 +1530,23 @@ let details1=[
             });
         }
 
+        if(localStorage.getItem("KoovsCart")===null) {
+            localStorage.setItem("KoovsCart",JSON.stringify([]))
+        }
+        function addtobag(p) {
+            
+        let products_cart=JSON.parse(localStorage.getItem("KoovsCart"));
+        products_cart.push(p);
+
+        localStorage.setItem("KoovsCart",JSON.stringify(products_cart));
+            }
+
+
 
         displayproducts(details);
+
+
+
         let menscount=0;
         let womencount=0;
         let prod=document.getElementById("productscount");
@@ -1353,6 +1607,31 @@ let details1=[
         function dummys() {
             displayproducts(details1);
         }
+        function dummys1() {
+            let all=document.getElementsByClassName("checkboxsize");
+            for(let i=0; i<all.length; i++) {
+                all[i].checked=false;
+            }
+            menscount=0;
+            womencount=0;
+            topscount=0;
+            shirtcount=0;
+            jeanscount=0;
+            tshirtcount=0;
+            dresscount=0;
+            brand1count=0;
+            brand2count=0;
+            brand3count=0;
+            brand4count=0;
+            pricerange1=0;
+            pricerange2=0;
+            pricerange3=0;
+            discount1=0;
+            discount2=0;
+            discount3=0;
+            displayproducts(details1);
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
         function sortLH() {
          let arr=details.sort(function(a,b) {
           return a.price - b.price;
@@ -1372,6 +1651,321 @@ let details1=[
            return b.discount - a.discount;
         });
         displayproducts(arr);
+         }
+
+         let topscount=0;
+         function topssort() {
+            if(topscount%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].category=="Top") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            topscount++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            topscount++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+         let shirtcount=0;
+         function shirtsort() {
+            if(shirtcount%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].category=="Shirt") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            shirtcount++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            shirtcount++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let jeanscount=0;
+         function jeanssort() {
+            if(jeanscount%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].category=="Jeans") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            jeanscount++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            jeanscount++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let tshirtcount=0;
+         function tshirtsort() {
+            if(tshirtcount%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].category=="T-Shirt") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            tshirtcount++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            tshirtcount++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+         
+
+         let dresscount=0;
+         function dresssort() {
+            if(dresscount%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].category=="Dress") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            dresscount++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            dresscount++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+
+         let brand1count=0;
+         function brand1sort() {
+            if(brand1count%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].brand=="Blue Saint") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            brand1count++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            brand1count++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         
+         let brand2count=0;
+         function brand2sort() {
+            if(brand2count%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].brand=="Oxolloxo") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            brand2count++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            brand2count++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let brand3count=0;
+         function brand3sort() {
+            if(brand3count%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].brand=="KOOVS") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            brand3count++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            brand3count++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let brand4count=0;
+         function brand4sort() {
+            if(brand4count%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if(details[i].brand=="KOOVS") {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            brand4count++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            brand4count++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let pricerange1=0;
+         function pricerange1sort() {
+            if(pricerange1%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if((details[i].price>=200) && (details[i].price<=500)) {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            pricerange1++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            pricerange1++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let pricerange2=0;
+         function pricerange2sort() {
+            if(pricerange2%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if((details[i].price>=501) && (details[i].price<=900)) {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            pricerange2++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            pricerange2++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let pricerange3=0;
+         function pricerange3sort() {
+            if(pricerange3%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if((details[i].price>=900) && (details[i].price<=2599)) {
+                    console.log("Yes")
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            pricerange3++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            pricerange3++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let discount1=0;
+         function discount1sort() {
+            if(discount1%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if((details[i].discount>=0) && (details[i].discount<=29)) {
+                    console.log("Yes");
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            discount1++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            discount1++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let discount2=0;
+         function discount2sort() {
+            if(discount2%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if((details[i].discount>=30) && (details[i].discount<=59)) {
+                    console.log("Yes");
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            discount2++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            discount2++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
+         }
+
+
+         let discount3=0;
+         function discount3sort() {
+            if(discount3%2==0) {
+            let arr=[];
+            for(let i=0;i<details.length;i++) {
+                if((details[i].discount>=60) && (details[i].discount<=89)) {
+                    console.log("Yes");
+                    arr.push(details[i]);
+                }
+            }
+            prod.innerText="Street Wear ( "+(arr.length)+" Products ) ";
+            discount3++;
+            displayproducts(arr);
+        } else {
+            displayproducts(details1);
+            discount3++;
+            prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
+        }
          }
     </script>
 </body>
