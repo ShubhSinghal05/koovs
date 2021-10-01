@@ -388,9 +388,9 @@ a:link {
         </div>
             <div>
         <div class="navbar-right">
-            <span class="login cursor">Login</span>&nbsp;|&nbsp;
+            <span class="login cursor" onclick="login()">Login</span>&nbsp;|&nbsp;
             <span id="vert-line"></span>
-            <span class="signup cursor">Sign_Up</span>
+            <span class="signup cursor" onclick="signup()">Sign_Up</span>
           <span class="nav-icons cursor"><img class="nav-icon" src="https://static.thenounproject.com/png/635650-200.png" alt=""> <h6>WISHLIST</small></h6></span> 
           <span class="nav-icons cursor"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/128/687/687259.png" alt=""> <h6>BAG</small></h6>  </span>
          
@@ -711,6 +711,16 @@ a:link {
 	function productpage()
 	{
 		window.location.href = "productpage.html";	
+	}
+	
+	function login()
+	{
+		window.location.href = "Login.html";	
+	}
+	
+	function signup()
+	{
+		window.location.href = "signup1.html";	
 	}
 
 	function checkpincode()
