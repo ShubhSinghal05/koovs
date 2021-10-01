@@ -160,29 +160,6 @@
 		color: rgb(83, 82, 82);
 		margin-left: 1%;
 	}
-	#trmargin
-	{
-		margin-top: -5px;
-		color:#B2B0B0;
-		font-size: 14px;
-	}
-	
-	#trmargin1 , #pprice
-	{
-		margin-top: -5px;
-		margin-left: -530px;
-	}
-	#pname
-	{
-		margin-left:-195.5px;
-	}
-	#trmargin0
-	{
-		margin-top: -5px;
-		margin-left: -560px;
-		font-size: 20px;
-		font-weight:bolder;
-	}
 	#size
 	{
 		margin-top: 30px;
@@ -190,9 +167,9 @@
 		grid-template-columns: 7% 7% 7%;
 		gap: 2%;
 	}
-	#size1
+	#size1 , #size2 , #size3
 	{
-		border: 2px solid rgb(110, 109, 109);
+		border: 2px solid rgb(68, 66, 69);
 		border-radius: 300px;
 		width:35px;
 		height: auto;
@@ -386,6 +363,17 @@ a:link {
         color: black;
         }
 
+		#pname , #pprice , #offer
+		{
+			font-size: 190%;
+			font-weight: bold;
+		}
+		#msize
+		{
+			font-size: 130%;
+			font-weight: bold;
+		}
+
 
 
 </style>
@@ -395,7 +383,7 @@ a:link {
         <div class="navbar-mid">
             <h1 class="create-account cursor">KOOVS.COM</h1>
             <a href="productpage.html">
-          <span class="create-account cursor colortop">  <span >MEN</span><span>WOMEN</span> <span>THE BLOG</span><span>KOOVSXYOU</span><span>IN STYLE OF</span></span>
+          <span class="create-account cursor colortop">  <span onclick="productpage()" >MEN</span><span onclick="productpage()">WOMEN</span> <span onclick="productpage()">THE BLOG</span><span onclick="productpage()">KOOVSXYOU</span><span>IN STYLE OF</span></span>
 		</a>
         </div>
             <div>
@@ -420,67 +408,42 @@ a:link {
 		
 		<div id="mainimg">
 			<div>
-				<div id="img1" onmouseover="goimg1()"></div>
-				<div id="img2" onmouseover="goimg2()"></div>
-				<div id="img3" onmouseover="goimg3()"></div>
+				<div id="img1" onmouseover="goimg1()" onmouseleave="outimg()"></div>
+				<div id="img2" onmouseover="goimg2()" onmouseleave="outimg()"></div>
+				<div id="img3" onmouseover="goimg3()" onmouseleave="outimg()"></div>
 			</div>
 			<div id="img0">
 
 			</div>
 		</div>
-		<div style="height: auto ;">
-			<table>
-				<tr>
-					<th>
-						<h1 id="pname">srng</h1>
-					</th>
-				</tr>
-				<tr>
-					<th>
-						<h2  id="trmargin">Lght Wash Slim Fit</h2>
-					</th>
-				</tr>
-				<tr>
-					<th>
-						<h1  id="pprice">₹ 000 </h1>
-					</th>
-				</tr>
-				<tr>
-					<th>
-						<h3  id="trmargin">Taxes may be applicable at checkout</h3>
-					</th>
-				</tr>
-				<tr>
-					<th>
-						<h1  id="trmargin0">Size</h1>
-						<div id="size">
-							<div id="size1">S</div>
-							<div id="size1">M</div>
-							<div id="size1">L</div>
-						</div>
-					</th>
-				</tr>
-				<tr id="b">
-					<th>
-						<button id="b1" onclick="buynow()" ><h2>BUY NOW</h2></button> <button id="b2" onclick="addtobag()" ><h2>ADD TO BAG</h2> </button>
-					</th>
-				</tr>
-				<tr>
-					<th>
-						<br><h1 id="trmargin1">Offer</h1>
-					</th>
-				</tr>
-				<tr>
-					<th style="border:1px solid #D3D3D3;width: 70%;">
-						<h3 style="margin-left: 10%;">
-							Get 5% instant discount on all prepaid orders
-						</h3>
-						<h4 style="margin-left: 10%;">
-							Offer applicable over and above promtional diccount T&C
-						</h4>
-					</th>
-				</tr>
-			</table>
+
+			<div style="height: auto;">
+				<p id="pname">Name</p>
+				<p>Long Wash Slim Fit<p>
+				<p id="pprice">₹ 000</p>
+				<p>Taxes may be applicable at checkout</p>
+				<p id="msize">Size</p>
+				<div>
+					<div id="size">
+						<div id="size1" onclick="ssize1()">S</div>
+						<div id="size2" onclick="ssize2()">M</div>
+						<div id="size3" onclick="ssize3()">L</div>
+					</div>
+				</div>
+				<div id="b">
+					<button id="b1" onclick="buynow()" ><h2>BUY NOW</h2></button> 
+					<button id="b2" onclick="addtobag()" ><h2>ADD TO BAG</h2> </button>
+				</div>
+				<p id="offer">Offer</p>
+				<div style="border:1px solid #D3D3D3;width: 70%;">
+					<h3 style="margin-left: 10%;">
+						Get 5% instant discount on all prepaid orders
+					</h3>
+					<h4 style="margin-left: 10%;">
+						Offer applicable over and above promtional diccount T&C
+					</h4>
+				</div>
+
 		</div>
 	</div>
 	<div id="pd0"><h1>Product Details</h1><h1>Delivery Option</h1></div>
@@ -512,6 +475,7 @@ a:link {
 					<li><strong class="grey">Belt loops</strong></li>
 					<li><strong class="grey">Skinny</strong></li>
 				</ui>
+				<br>
 			</div>
 		</div>
 		<div id="md2">
@@ -524,13 +488,13 @@ a:link {
 	</div>
 	<br>
 	<div>
-		<h1>Related Searches</h1>
+		<h1 style="text-align: left;margin-left:2%;">Related Searches</h1>
 		<div id="lastmd">
-			<div id="ld">
-				<strong>Men</strong>
+			<div id="ld" onclick="productpage()">
+				<strong >Men</strong>
 			</div>
-			<div id="ld">
-				<strong>Women</strong>
+			<div id="ld" onclick="productpage()">
+				<strong >Women</strong>
 			</div>			
 			<div id="ld">		
 				<strong>More From KOOVS</strong>
@@ -657,29 +621,9 @@ a:link {
 
 <script> 
 
-	let dict = {
-		brand:"Blue Saint",
-		name:"Horizontal Stripe Casual Top",
-		price:999,
-		priceoff:"₹2199",
-		productcode:153132,
-		gender:"Women",
-		discount:"60",
-		category:"Top",
-		material:"100% Cotton",
-		size:"This brand runs true to size. To ensure the best fit, we suggest consulting the size chart.",
-		description:" Top by Blue Saint,Made from Cotton,Round neck,Horizontal stripe,Half Sleeves,Split hem,Slim fit",
-		commodity:"Women's Tops",
-		country:"India",
-		manufacturer:"Blue Saint",
-		address:"Raised On Denim, Unit-1 Survey no. 63/3, Bangalore, KA, 560068",
-		support:"Marble E-Retail Pvt. Ltd First Floor, Plot No 54 B, Sector-18, Udyog Vihar, Gurgaon, Haryana - 122015,+91-124-6770000,care@koovs.com",
-		displayimg:"https://product.koovs.com/170374_1a323a37ddc44350861809967d387cf5_image1_super_zoom.webp",
-		img1:"https://product.koovs.com/170374_1a323a37ddc44350861809967d387cf5_front_super_zoom.webp",
-		img2:"https://product.koovs.com/170374_1a323a37ddc44350861809967d387cf5_back_super_zoom.webp",
-		img3:"https://product.koovs.com/170374_1a323a37ddc44350861809967d387cf5_left_super_zoom.webp",
-	}
 
+	let items = JSON.parse(localStorage.getItem("displayitem"));
+	let dict = items[0];
 
 	let img1 = document.getElementById("img1");
 	let img_1=document.createElement("img");
@@ -725,6 +669,15 @@ a:link {
 	img0.append(img_0);	
 	}
 
+	function outimg()
+	{
+		img0.innerHTML = null;
+		let img_0=document.createElement("img");
+		img_0.src=dict.displayimg;
+		img0.append(img_0);
+	}
+
+
 	let pname = document.getElementById("pname");
 	pname.textContent = dict.name;
 
@@ -748,12 +701,16 @@ a:link {
 
 	function addtobag()
 	{
-		alert("add to bag... :)")
+		window.location.href = "Cart.html";
 	}
 
 	function buynow()
 	{
-		alert("buy now... :)")
+		window.location.href = "";
+	}
+	function productpage()
+	{
+		window.location.href = "productpage.html";	
 	}
 
 	function checkpincode()
@@ -762,8 +719,40 @@ a:link {
 		alert("Your Pincode : "+pincode.value);
 	}
 
+	let size1 = document.getElementById("size1");
+	let size2 = document.getElementById("size2");
+	let size3 = document.getElementById("size3");
+	let color = "rgb(67, 10, 181)"
+	
+	function ssize1()
+	{
+		size1.style.backgroundColor = color;
+		size1.style.color = "white";
+		size2.style.backgroundColor = null;
+		size3.style.backgroundColor = null;
+		size2.style.color = "rgb(110, 109, 109)";
+		size3.style.color = "rgb(110, 109, 109)";
+	}
 
+	function ssize2()
+	{
+		size2.style.backgroundColor = color;
+		size2.style.color = "white";
+		size1.style.backgroundColor = null;
+		size3.style.backgroundColor = null;
+		size1.style.color = "rgb(110, 109, 109)";
+		size3.style.color = "rgb(110, 109, 109)";
+	}
 
+	function ssize3()
+	{
+		size3.style.backgroundColor = color;
+		size3.style.color = "white";
+		size1.style.backgroundColor = null;
+		size2.style.backgroundColor = null;
+		size1.style.color = "rgb(110, 109, 109)";
+		size2.style.color = "rgb(110, 109, 109)";
+	}
 
 
 
