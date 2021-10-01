@@ -91,14 +91,7 @@ img{
             display: inline-block;
             justify-content: right;
 }
-#products{
-    width: 95%;
-     height: 120px;
-     border: 1px solid lightgray;
-}
-#product-img{
-    width: 20%;
-}
+
 .subtotal{
     width: 40%;
     padding: 10px;
@@ -168,21 +161,26 @@ img{
                 <span id="qty"></span>
                 <span >Items</span>
                 <div id="products">
-                   <div id="product-img"></div>
-                   <div id="product-details">
-                       <span id="brand"></span>
-                       <span id="name"></span>
-                   </div>
-                   <span>size</span>
-                   <span>
-                       <select name="" id="select-size">
-                           <option value="S">S</option>
-                           <option value="M">M</option>
-                           <option value="L">L</option>
-                           <option value="XL">XL</option>
-                       </select>
-                   </span>
-                   <span>QTY</span>
+                    <div id="product-details">
+                        <div id="product-img"></div>
+                        <div id="product-detail">
+                            <span id="brand"></span>
+                            <span id="name"></span>
+                            <span>size</span>
+
+                        </div>
+                        <span>
+                            <select name="" id="select-size">
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                        </span>
+                        <span>QTY</span>
+                    </div>
+                  
+                  
                 </div>
             </div>
         
@@ -259,9 +257,10 @@ img{
             let inpbox1=document.getElementById("inpbox");
 
         let parent=document.getElementById("products");
-        let productImg=document.getElementById("product-img")
-        let productDetails=document.getElementById('product-details')
-        let productSize=document.getElementById("select-size")
+        let productImg=document.createElement("div")
+        let productDetails=document.createElement('div')
+        let productSize=document.createElement("div")
+        let productDetail=document.createElement("span")
 
         let qty=document.getElementById("qty");
         let promo=document.getElementById("promo");
@@ -284,19 +283,56 @@ function showProduct(){
       let div= document.createElement('div')
       let div3=document.createElement('div')
       let img=document.createElement('img')
+      let select=document.createElement("select")
+      let option1=document.createElement("option")
+           option1.value="s"
+           option1.textContent="S"
+
+           let option2=document.createElement("option")
+           option2.value="m"
+           let option3=document.createElement("option")
+           option3.value="l"
+           option3.textContent="L"
+
+           let option4=document.createElement("option")
+           option4.value="xl"
+           option4.textContent="XL"
+
+           option2.textContent="M"
+
+           select.append(option1,option2,option3,option4)
+
       img.src=product.displayimg;
       let  product_price=document.createElement("p")
       product_price.textContent=product.price
       
       let product_name=document.createElement('p')
       product_name.textContent=product.name
-      div.append(img)
-      div3.append(div)
-      productImg.append(img)
-      parent.append(div3)
-      div3.style.width="100%"
-      div3.style.height="30px"
-      parent.style.border="1px solid black"
+       productImg.append(img)
+      productDetail.append(product_name,product_price ,select)
+
+      productDetails.append(productImg,productDetail)
+      parent.append(productDetails)
+      productImg.style.display="flex"
+      productImg.style.flexDirection="column"
+      productImg.style.width="50%"
+      productImg.style.margin="2%"
+      img.style.width="80%"
+      img.style.height="120px"
+      img.style.margin="5px"
+      select.style.width="40px"
+      productDetails.style.display="flex"
+      productDetail.style.display="flex"
+      productDetail.style.margin="9px"
+      productDetail.style.flexDirection="column"
+     // productDetails.style.flexDirection="column"
+
+      productDetails.style.border="1px solid red"
+      parent.style.width="100%"
+      productDetail.style.border="1px solid green"
+      productDetail.style.width="40%"
+      productDetails.style.width="100%"
+
     })
 }
 showProduct()
