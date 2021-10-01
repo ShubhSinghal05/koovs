@@ -252,8 +252,8 @@ h6{
     
         <div class="navbar-right-top" >
             <div class="navbar-right-login">
-                <div class="login cursor">Login</div>&nbsp;
-                <span class="signup cursor">|&nbsp;Sign&nbsp;Up</span>
+                <div class="login cursor" onclick="login()">Login</div>&nbsp;
+                <span class="signup cursor" onclick="signup()">|&nbsp;Sign&nbsp;Up</span>
             </div>
            
           <div class="nav-icons cursor"><img class="nav-icon" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/wishlist.jpeg?raw=true" alt=""> <h6>WISHLIST</small></h6></div> 
@@ -459,5 +459,16 @@ h6{
     arr.push(user)
     
     localStorage.setItem('users',JSON.stringify(arr))
+    
     }
+
+    function login()
+	{
+		window.location.href = "Login.html";	
+	}
+	
+	function signup()
+	{
+		window.location.href = "signup1.html";	
+	}
     </script>
