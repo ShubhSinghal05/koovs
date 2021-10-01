@@ -489,7 +489,7 @@ a:link {
 		</div>
 		<div id="md2">
 			<h2 style="margin-left: 5%;"> Pincode <h2>
-				<form onsubmit="checkpincode()" id="pinform">
+				<form onsubmit="checkpincode(event)" id="pinform">
 					<input type="number" id="pincode" required placeholder="  ENTER PINCODE">
 					<button id="check" type="submit">Check</button><br>
 				</form>
@@ -766,8 +766,9 @@ a:link {
 	{
 		window.location.href = "koovs.html";
 	}
-	function checkpincode()
+	function checkpincode(e)
 	{	
+		e.preventDefault();
 		let pinmsg = document.getElementById("pinmsg");
 		let pin = document.getElementById("pincode");
 			pinmsg.append("Delivery Available On "+pin.value);						
