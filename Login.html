@@ -433,19 +433,24 @@ h5{
     let email=myform.email.value
     let password=myform.password.value
     let allUsers=JSON.parse(localStorage.getItem('users'))
-    
+   var flag=0 
     allUsers.forEach(function(user){
     if(email===user.email && password===user.password){
-        homepage()
+        flag=1
+       return true
 //alert("logged in successfully")
-           return true   
-    }else{
-        //alert("Invalid credentials")
-        window.location.href = "Login.html";
-        return false
+          // return true   
     }
 })
+if(flag){
+    alert("logged in successfully")
+    homepage()
+}else{
+    alert("Invalid credentials") 
+    window.location.href = "Login.html";
 }
+}
+
 function homepage(){
     window.location.href="koovs.html"
 }
