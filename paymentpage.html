@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koovs</title>
+    <link rel="icon" href="https://images.koovs.com/uploads/koovs/kv-favicon.ico"> 
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      font-family: "Lato", sans-serif;
+      margin: 0;
+    }
+    #maincontainer {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 70px 50px 50px 100%;
+    }
+    #maincontainer > div:nth-child(1) {
+        padding-top:20px;
+      border-bottom: 2px solid #95989A;
+    }
+    #maincontainer > div:nth-child(1) > div {
+      text-align: center;
+    }
+    #maincontainer > div:nth-child(2) > img {
+      width: 100%;
+    }
+    #maincontainer > div:nth-child(4) {
+      display: grid;
+      height: 500px;
+      grid-template-columns: 70% 30%;
+      grid-template-rows: 100%;
+    }
+
+    #paymentdetails {
+      display: grid;
+      border: 1px solid #95989A;
+      height: 500px;
+      grid-template-columns: 30% 70%;
+      grid-template-rows: repeat(5, 20%);
+      margin-left: 40px;
+      margin-right: 30px;
+    }
+    #paymentdetails > div:nth-child(1) {
+      font-weight: bold;
+    }
+    #paymentdetails > div:nth-child(2) {
+      grid-row-start: 1;
+      grid-row-end: 6;
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+    #paymentdetails > div:nth-child(2) > div {
+        margin-left: 40px;
+    }
+    #paymentdetails > div:nth-child(3) {
+      background-color: #efefef;
+    }
+    #paymentdetails > div:nth-child(4) {
+      background-color: #efefef;
+    }
+    #paymentdetails > div:nth-child(5) {
+      background-color: #efefef;
+    }
+    #paymentdetails > div:nth-child(6) {
+      background-color: #efefef;
+    }
+    .iconssize {
+      font-size: 40px;
+      margin-top: 25px;
+      margin-left: 15px;
+    }
+    .texticons {
+      display: inline-block;
+      position: relative;
+      top: -12px;
+      margin-left: 20px;
+    }
+    .detailsstr {
+        display: grid;
+        grid-template-rows:40px 90px 90px 70px 70px 90px ;
+        grid-template-columns: 50% 50%;
+        padding-top:30px;
+    }
+    .detailsstr > div:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .detailsstr > div:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .detailsstr > div:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .detailsstr > div:nth-child(4) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .detailsstr > div:nth-child(5) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    .detailsstr > div:nth-child(6) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        padding-top: 15px;
+    }
+    .detailsstr > div:nth-child(7) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+    .detailsstr > div > input {
+        width: 200px;
+        height: 30px;
+        border: none;
+        border-bottom: 1px solid #95989A;
+    }
+    .detailsstr > div > input {
+        outline: none;
+    }
+    .detailsstr > div:nth-child(2) > input {
+        width: 450px;
+        height: 30px;
+    }
+    .detailsstr > div:nth-child(5) > input {
+        width: 100px;
+        height: 30px;
+    }
+    .detailsstr > div:nth-child(6) > input {
+        width: 450px;
+        height: 30px;
+    }
+    .detailsstr > div:nth-child(7) > a > button {
+        background-color:black;
+        color: white;
+        border: none;
+        width: 300px;
+        height: 50px;
+        font-weight: bolder;
+        font-size: 20px;
+    }
+    #select {
+        margin-left: 40px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        font-size: 16px;
+    }
+  </style>
+  <body>
+    <div id="maincontainer">
+      <div>
+        <div>
+          <img src="https://images.koovs.com/uploads/koovs/logo.png" />
+        </div>
+      </div>
+      <div>
+        <img src="https://i.imgur.com/WVzlJRk.jpeg" />
+      </div>
+      <div>
+        <h3 id="select">SELECT PAYMENT OPTION</h3>
+      </div>
+      <div>
+        <div id="paymentdetails">
+          <div>
+            <span class="material-icons iconssize"> credit_card </span>
+            <p class="texticons">CREDIT CARD</p>
+          </div>
+          <div>
+            <div class="detailsstr">
+              <div>
+                <h3>CREDIT CARD</h3>
+              </div>
+              <div>
+                <p>Card Number</p>
+                <input type="number" placeholder="XXXX XXXX XXXX XXXX" />
+              </div>
+              <div>
+                <p>Expiry Month</p>
+                <input type="number" placeholder="XX" />
+              </div>
+              <div>
+                <p>Expiry Year</p>
+                <input type="number" placeholder="XXXX" />
+              </div>
+              <div>
+              <p>CVV</p>
+              <input type="number" placeholder="XXX" />
+            </div>
+              <div>
+                <input type="text" placeholder="Name on Card" />
+              </div>
+              <div>
+                <a href="Success.html"><button>PAY NOW</button></a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <span class="material-icons iconssize"> payments </span>
+            <p class="texticons">DEBIT CARD</p>
+          </div>
+          <div>
+            <span class="material-icons iconssize"> toll </span>
+
+            <p class="texticons">NET BANKING</p>
+          </div>
+          <div>
+            <span class="material-icons iconssize">
+              account_balance_wallet
+            </span>
+            <p class="texticons">WALLET/UPI</p>
+          </div>
+          <div>
+            <span class="material-icons iconssize"> euro_symbol </span>
+            <p class="texticons">CASH ON DELIVERY</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
