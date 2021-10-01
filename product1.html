@@ -349,6 +349,15 @@ h5{
 	font-size: 14px;
 	font-weight:lighter;
 }
+#pinmsg
+{
+	margin-left:5%;
+	color: rgb(52, 54, 52);
+	font-size: 100%;
+	font-weight: bold;
+	margin-bottom: -3%;
+}
+
 a:link {
         color: black;
 		text-decoration: none;
@@ -381,16 +390,16 @@ a:link {
 	
 	<div id="navbar">
         <div class="navbar-mid">
-            <h1 class="create-account cursor">KOOVS.COM</h1>
+            <h1 class="create-account cursor" onclick="home()">KOOVS.COM</h1>
             <a href="productpage.html">
           <span class="create-account cursor colortop">  <span onclick="productpage()" >MEN</span><span onclick="productpage()">WOMEN</span> <span onclick="productpage()">THE BLOG</span><span onclick="productpage()">KOOVSXYOU</span><span>IN STYLE OF</span></span>
 		</a>
         </div>
             <div>
         <div class="navbar-right">
-            <span class="login cursor">Login</span>&nbsp;|&nbsp;
+            <span class="login cursor" onclick="login()">Login</span>&nbsp;|&nbsp;
             <span id="vert-line"></span>
-            <span class="signup cursor">Sign_Up</span>
+            <span class="signup cursor" onclick="signup()">Sign_Up</span>
           <span class="nav-icons cursor"><img class="nav-icon" src="https://static.thenounproject.com/png/635650-200.png" alt=""> <h6>WISHLIST</small></h6></span> 
           <span class="nav-icons cursor"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/128/687/687259.png" alt=""> <h6>BAG</small></h6>  </span>
          
@@ -480,8 +489,8 @@ a:link {
 		</div>
 		<div id="md2">
 			<h2 style="margin-left: 5%;"> Pincode <h2>
-				<input type="number" id="pincode" placeholder="  ENTER PINCODE"><button id="check" onclick="checkpincode()">Check</button>
-				<br>
+				<input type="number" id="pincode" placeholder="  ENTER PINCODE"><button id="check" onclick="checkpincode()">Check</button><br>
+				<p id="pinmsg"></p>
 				<br>
 				<P id="md2grey">The Product maybe applicable for free Delivery</P>
 		</div>
@@ -712,11 +721,26 @@ a:link {
 	{
 		window.location.href = "productpage.html";	
 	}
-
+	
+	function login()
+	{
+		window.location.href = "Login.html";	
+	}
+	
+	function signup()
+	{
+		window.location.href = "signup1.html";	
+	}
+	function home()
+	{
+		window.location.href = "koovs.html";
+	}
 	function checkpincode()
 	{
-		let pincode = document.getElementById("pincode");
-		alert("Your Pincode : "+pincode.value);
+		let pinmsg = document.getElementById("pinmsg");
+		pinmsg.innerHTML = null;
+		pinmsg.append("Delivery Available")
+				
 	}
 
 	let size1 = document.getElementById("size1");
