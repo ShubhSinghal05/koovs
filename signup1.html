@@ -481,22 +481,23 @@ if(name==""){
     return false
 }else if(contact.length!==10){
     alert("Invalid Phone number")
-}else
-
-if(flag==0){
-        alert("Password must consist of atleast one special Character")
-        return false;
 }else if(c==1){
-    alert("Password must be of six characters")
-}
-else{
-    alert("Successfully created an account")
-    homepage()
+    alert("Password Must contain atleast six characters ")
+}else 
+
+  if(flag==0){
+        alert("Password must consist of atleast one special Character")
+           return false
+    }else{
+        alert("Successfully created an account")
+        homepage()
+    }
 }
 
 
-   
-} 
+
+
+
 function homepage(){
     window.location.href="koovs.html"
 }
