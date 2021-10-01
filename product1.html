@@ -349,6 +349,15 @@ h5{
 	font-size: 14px;
 	font-weight:lighter;
 }
+#pinmsg
+{
+	margin-left:5%;
+	color: rgb(52, 54, 52);
+	font-size: 100%;
+	font-weight: bold;
+	margin-bottom: -3%;
+}
+
 a:link {
         color: black;
 		text-decoration: none;
@@ -381,7 +390,7 @@ a:link {
 	
 	<div id="navbar">
         <div class="navbar-mid">
-            <h1 class="create-account cursor">KOOVS.COM</h1>
+            <h1 class="create-account cursor" onclick="home()">KOOVS.COM</h1>
             <a href="productpage.html">
           <span class="create-account cursor colortop">  <span onclick="productpage()" >MEN</span><span onclick="productpage()">WOMEN</span> <span onclick="productpage()">THE BLOG</span><span onclick="productpage()">KOOVSXYOU</span><span>IN STYLE OF</span></span>
 		</a>
@@ -480,8 +489,8 @@ a:link {
 		</div>
 		<div id="md2">
 			<h2 style="margin-left: 5%;"> Pincode <h2>
-				<input type="number" id="pincode" placeholder="  ENTER PINCODE"><button id="check" onclick="checkpincode()">Check</button>
-				<br>
+				<input type="number" id="pincode" placeholder="  ENTER PINCODE"><button id="check" onclick="checkpincode()">Check</button><br>
+				<p id="pinmsg"></p>
 				<br>
 				<P id="md2grey">The Product maybe applicable for free Delivery</P>
 		</div>
@@ -722,11 +731,16 @@ a:link {
 	{
 		window.location.href = "signup1.html";	
 	}
-
+	function home()
+	{
+		window.location.href = "koovs.html";
+	}
 	function checkpincode()
 	{
-		let pincode = document.getElementById("pincode");
-		alert("Your Pincode : "+pincode.value);
+		let pinmsg = document.getElementById("pinmsg");
+		pinmsg.innerHTML = null;
+		pinmsg.append("Delivery Available")
+				
 	}
 
 	let size1 = document.getElementById("size1");
