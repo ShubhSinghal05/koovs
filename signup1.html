@@ -473,6 +473,16 @@ for(var i=0;i<password.length;i++){
            //return false
     
 }
+if(name==""){
+    alert("Name cannot be blank")
+    return false
+}else if(email==""){
+    alert("Invallid email")
+    return false
+}else if(contact.length!==10){
+    alert("Invalid Phone number")
+}else
+
 if(flag==0){
         alert("Password must consist of atleast one special Character")
         return false;
@@ -483,6 +493,7 @@ else{
     alert("Successfully created an account")
     homepage()
 }
+
 
    
 } 
