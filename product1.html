@@ -401,7 +401,7 @@ a:link {
             <span id="vert-line"></span>
             <span class="signup cursor" onclick="signup()">Sign_Up</span>
           <span class="nav-icons cursor"><img class="nav-icon" src="https://static.thenounproject.com/png/635650-200.png" alt=""> <h6>WISHLIST</small></h6></span> 
-          <span class="nav-icons cursor"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/128/687/687259.png" alt=""> <h6>BAG</small></h6>  </span>
+          <span class="nav-icons cursor" onclick="gocart()"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/128/687/687259.png" alt=""> <h6>BAG</small></h6>  </span>
          
 
         </div>
@@ -489,7 +489,10 @@ a:link {
 		</div>
 		<div id="md2">
 			<h2 style="margin-left: 5%;"> Pincode <h2>
-				<input type="number" id="pincode" placeholder="  ENTER PINCODE"><button id="check" onclick="checkpincode()">Check</button><br>
+				<form onsubmit="checkpincode(event)" id="pinform">
+					<input type="number" id="pincode" required placeholder="  ENTER PINCODE">
+					<button id="check" type="submit">Check</button><br>
+				</form>
 				<p id="pinmsg"></p>
 				<br>
 				<P id="md2grey">The Product maybe applicable for free Delivery</P>
@@ -710,13 +713,41 @@ a:link {
 
 	function addtobag()
 	{
-		window.location.href = "Cart.html";
+		if(localStorage.getItem("KoovsCart")===null)
+		{
+    		localStorage.setItem("KoovsCart", JSON.stringify([]));
+		}
+
+			let cart = JSON.parse(localStorage.getItem("KoovsCart"));
+			let s = false;
+			cart.forEach(function(item)
+			{
+				if (item.name == dict.name)
+				{
+					s = true;
+				}
+			});	
+			if(s == true)
+			{
+				alert("Product already in cart..");
+			}
+			else
+			{
+				cart.push(dict);
+				localStorage.setItem("KoovsCart",JSON.stringify(cart));
+				window.location.href = "Cart.html";
+			}		
 	}
 
 	function buynow()
 	{
 		window.location.href = "paymentpage.html";
 	}
+	function gocart()
+	{
+		window.location.href = "Cart.html";
+	}
+
 	function productpage()
 	{
 		window.location.href = "productpage.html";	
@@ -735,12 +766,12 @@ a:link {
 	{
 		window.location.href = "koovs.html";
 	}
-	function checkpincode()
-	{
+	function checkpincode(e)
+	{	
+		e.preventDefault();
 		let pinmsg = document.getElementById("pinmsg");
-		pinmsg.innerHTML = null;
-		pinmsg.append("Delivery Available")
-				
+		let pin = document.getElementById("pincode");
+			pinmsg.append("Delivery Available On "+pin.value);						
 	}
 
 	let size1 = document.getElementById("size1");
@@ -777,10 +808,6 @@ a:link {
 		size1.style.color = "rgb(110, 109, 109)";
 		size2.style.color = "rgb(110, 109, 109)";
 	}
-
-
-
-
 
 
 </script>
