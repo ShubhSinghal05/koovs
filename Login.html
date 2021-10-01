@@ -429,20 +429,27 @@ h5{
     function signin(e){
     e.preventDefault()
     let myform=document.getElementById('myform')
-    let name=myform.name.value
+   // let name=myform.name.value
     let email=myform.email.value
     let password=myform.password.value
     let allUsers=JSON.parse(localStorage.getItem('users'))
     
     allUsers.forEach(function(user){
     if(email===user.email && password===user.password){
-        alert("logged in successfully")
-        window.location.href="koovs.html"
+        homepage()
+//alert("logged in successfully")
+           return true   
     }else{
-        alert("Invalid credentials")
+        //alert("Invalid credentials")
+        window.location.href = "Login.html";
+        return false
     }
 })
 }
+function homepage(){
+    window.location.href="koovs.html"
+}
+
 
     function login2()
 	{
