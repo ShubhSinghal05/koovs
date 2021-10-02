@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koovs</title>
+    <link rel="icon" href="https://images.koovs.com/uploads/koovs/kv-favicon.ico"> 
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+       
+        .navbar-mid{
+           width: 70%;
+           text-align: center;
+           margin-left: 17%;
+           height: 60px;
+
+        }
+         .nav-koovs-logo{
+           width: 20%;
+           margin: 5px 0;
+           padding: 5px;
+
+        }  
+   .cursor{
+    cursor: pointer;
+   }      
+ .hline{
+            width: 100%;
+           border: 2px solid rgb(230, 224, 224);
+      } 
+ .cart-mid-top{
+           display: flex;
+           align-items: center;
+           margin-left: 18%;
+       }  
+.cart-mid-top div{
+           margin: 1%;
+           font-weight: 900;
+           width: auto;
+       }
+.hline-mid{
+           width: 20%;
+           height: 2px;
+           background-color: black;
+
+        }
+        .txt-lightwt{
+            color: lightgray;
+            font-size: 20px;
+        }   
+img{
+    width: 100%;
+}
+
+#promo{
+    width: 33%;
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+    border: none;
+    padding: 9px;
+}
+#inpbox{
+    width: 65%;
+    padding: 9px;
+}
+.promo-code{
+    display: flex;
+}
+.sh-amt{
+    width: 100%;
+   
+    
+}
+
+.cart-amt,.item-no{
+    width: 100%;
+    align-items: center;
+
+    display: flex;
+    justify-content:space-evenly;
+}
+
+#container{
+    width: 85%;
+    margin: 1% auto;
+    display: flex;
+}
+.products-container{
+            width:60%;
+
+            display: inline-block;
+            justify-content: right;
+}
+#products{
+display: flex;
+width: 90%;
+}
+
+
+.subtotal{
+    width: 38%;
+    height: 500px;
+    padding: 10px;
+    margin: 10px;
+   
+}.total-left{
+    width: 80%;
+    
+}
+.total-right{
+
+height: 170px;
+width: 20%;
+margin-left: 20%;
+}
+
+.tax-txt{
+    font-size: 14px;
+}
+.shipping-free{
+    color: green;
+}
+#checkout{
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    font-size: 16px;
+}.txt-bold{
+    font-weight: 700;
+}
+.foot-img{
+    width: 60px;
+    height: 60px;
+    margin: 0 5%;
+}
+#cart-footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 4% ;
+}
+.cart-footer-top{
+    display: flex;
+    align-items: center;
+}
+.cart-footer-bottom{
+    text-align: center;
+}
+.hline-bottom{
+    width: 100%;
+ border: 1px solid rgb(230, 224, 224);
+
+}
+    </style>
+</head>
+<body>
+    <div class="navbar-mid">
+        <img class=" nav-koovs-logo cursor" onclick="homepage()" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/koovslog1.jpg?raw=true" alt="">
+
+    </div>
+    <div class="hline"></div>
+
+    <div class="cart-mid-top">
+        
+        <div class="cursor"><h3>MY BAG</h3> </div>
+        <p class="hline-mid">
+
+        </p>
+        <div><p class="txt-lightwt">ORDER SUMMARY </p> </div>
+        <p class="hline-mid"></p>
+        <div><p class="txt-lightwt">PAYMENT</p> </div>
+    </div>
+     <div class="heading-mid">
+        
+
+     </div>
+    <div id="container">
+
+            <div class="products-container">
+                <span id="qty"></span>
+                <span >Items</span>
+                <div id="products">
+                    <div id="product-img"></div>
+                    <div id="product-detail"></div>
+                    <div id="priduct-size"></div>
+                  
+                  
+                </div>  
+            </div>
+        
+
+
+         <div class="subtotal">
+            <p class="txt-bold">PROMO CODE</p>
+
+            <div class="promo-code">
+                  <input id="inpbox" type="text" placeholder="Please enter here">
+                   <button id="promo">APPLY</button>
+             </div>
+
+           <div class="sh-amt">
+          
+            <p class="txt-bold">OFFER</p>
+            <p class="txt-bold">PRICE SUMMARY</p>
+            <div class="cart-amt">
+                <div class="total-left">
+                    <p class="txt-bold">BAG TOTAL &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp; :</p>
+                    <p>SHIPPING CHARGES &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   :</p>
+                    <p class="tax-txt">APPLICABLE TAXE AND CHARGES&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;:</p>
+                    <p class="txt-bold" >TOTAL PAYABLE   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;  :</p>
+                    <h5><small>PRICES INCLUSIVE OF ALL TAXES:</small> </h5>
+                </div>
+                
+
+                 <div class="total-right">
+                    <div id="total"class="txt-bold"></div>
+                    <p class="shipping-free">Free</p>
+                    
+                    <p id="gsttax">  </p>
+
+                    <div id="total2"class="txt-bold" ></div>
+                 </div>
+                
+            </div>
+
+
+        </div>
+             
+        <button id="checkout">PROCEED TO CHECKOUT</button>
+
+    </div>
+    </div>
+    <div class="hline-bottom"></div>
+
+   <div id="cart-footer">
+
+       <div class="cart-footer-top">
+           <div>
+                <img class="foot-img"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7LuzLQWSQ59z6s7Limu4wPnJf_CP0JYguKQ&usqp=CAU" alt="">
+            </div>
+           <div class="foot-txt">
+               <p>  SECURE SHOPPING</p>
+               <p>Safe spending with ssl technology</p>
+           </div>
+       </div>
+       <div class="cart-footer-top" >
+        <img class="foot-img" src="https://portals.clarity-ventures.com/portals/0/images/articleimgs/shopping%20cart%20security/securecart.png">
+        <div class="foot-txt">
+            <p>  FREE RETURNS</p>
+            <p >Not quite right? no worries sent it back for free</p>
+        </div>
+    </div>
+    <div class="cart-footer-top" >
+        <img class="foot-img" src="https://banner2.cleanpng.com/20180613/zeh/kisspng-paypal-payment-credit-card-american-express-servic-bronze-cross-5b20e76d6749e2.9754011415288830534231.jpg">
+        <div>
+            <p class="foot-txt">ALL PAYMENT OPTIONS</p>
+            <p>Multiple payment options availableology</p>
+        </div>
+    </div>
+   </div>
+   <div class="hline-bottom"></div>
+   <div class="cart-footer-bottom">
+       <p>KOOVS.COM © 2021 | All Rights Reserved</p>
+   </div>
+</body>
+</html>
+    <script>
+            let inpbox1=document.getElementById("inpbox");
+
+      let parent=document.getElementById("products")
+        let productImg=document.createElement("div")
+        let productDetails=document.createElement('div')
+        let productSize=document.createElement("span")
+        let productDetail=document.createElement("span")
+
+        let qty=document.getElementById("qty");
+        let promo=document.getElementById("promo");
+        let div2=document.createElement("div");
+        let checkout=document.getElementById("checkout");
+        
+       // checkout.innerText="checkout"
+        checkout.onclick=function(){window.location.href="Paymentpage.html"}
+        checkout.style.cursor="pointer"
+        promo.onclick=function(){applypromo()}
+        promo.style.cursor="pointer"
+                    var c=0;
+let cart=JSON.parse(localStorage.getItem("KoovsCart"));
+
+function showProduct(){
+  cart.forEach(function(product){
+      c++;
+      qty.innerHTML=c
+      console.log(product.name)
+
+     // let parent=document.getElementById("products");
+      //  let productDetail=document.getElementById("product-detail")
+      //  let productImg=document.getElementById("product-img")
+      //  let productSize=document.getElementById("product-size")
+
+      let div= document.createElement('div')
+      let namediv=document.createElement('div')
+      let img=document.createElement('img')
+      let select=document.createElement("select")
+      let option1=document.createElement("option")
+           option1.value="s"
+           option1.textContent="S"
+
+           let option2=document.createElement("option")
+           option2.value="m"
+           let option3=document.createElement("option")
+           option3.value="l"
+           option3.textContent="L"
+
+           let option4=document.createElement("option")
+           option4.value="xl"
+           option4.textContent="XL"
+
+           option2.textContent="M"
+
+           select.append(option1,option2,option3,option4)
+
+      img.src=product.displayimg;
+      let  product_price=document.createElement("p")
+      product_price.textContent='₹'+" "+product.price
+      let  product_priceoff=document.createElement("p")
+      product_priceoff.textContent=product.priceoff
+
+      let  product_brand=document.createElement("p")
+      product_brand.textContent=product.brand
+
+      let size=document.createElement("p").textContent="Size"
+      
+      let product_name=document.createElement('p')
+      product_name.textContent=product.name
+       productImg.append(img)
+
+      productDetail.append(product_name ,select,product_priceoff)
+
+       productSize.append(product_brand,size,product_price)
+
+      //productDetails.append(namediv,productDetail)
+
+      parent.append(productImg,productSize,productDetail)
+      productImg.style.display="flex"
+      productImg.style.flexDirection="column"
+      productImg.style.width="35%"
+      productImg.style.margin="3% 0"
+      img.style.width="68%"
+      img.style.height="150px"
+      img.style.margin="8px"
+      select.style.width="100px"
+     // productDetails.style.display="flex"
+      productDetail.style.display="flex"
+      productDetail.style.justifyContent="space-between"
+      productDetail.style.flexDirection="column"
+      productDetail.style.margin="5%"
+      productDetail.style.widt="40%"
+
+      productSize.style.display="flex"
+      productSize.style.flexDirection="column"
+      productSize.style.justifyContent="space-between"
+      productSize.style.margin="5%"
+      productSize.style.width="25%"
+      product_priceoff.style.textDecoration="line-through"
+    
+      parent.style.width="100%"
+     // productDetail.style.height="70%"
+     parent.style.display="flex"
+     parent.style.justifyContent="space-between"
+
+    })
+}
+showProduct()
+//total sum in the cart
+//console.log(inpbox1.value)
+var total=cart.reduce(function(ac,el){ 
+    
+    return ac+ Number(el.price)
+   },0)
+   var total_pr=document.getElementById("total")
+   //total_pr.style.textAlign="right"
+   total_pr.innerHTML='₹'+" "+total
+   var total_pr2=document.getElementById("total2")
+   var tax=0;
+   tax=total*0.05
+   var gsttax=document.getElementById("gsttax").innerText='₹'+" "+parseInt(tax)
+var total2=total+tax
+total3=total2
+total4=total2
+   total_pr2.innerHTML='₹'+" "+parseInt(total2)
+
+console.log(total)
+var m30=0
+var k20=0
+var k10=0
+function applypromo(){
+    if(inpbox1.value=="masai30"&&m30==0){
+        total2=total2-((30*total2)/100)
+        total_pr2.innerHTML=parseInt(total2)
+        m30++
+    }else
+    if(inpbox1.value=="koovs20"&&k20==0){
+        total3=total3-((20*total3)/100)
+        total_pr2.innerHTML=parseInt(total3)
+        k20++
+    }else
+    if(inpbox1.value=="koovs10"&& k10==0){
+        total4=total4-((10*total4)/100)
+        total_pr2.innerHTML=parseInt(total4)
+        k10++
+    }
+}
+function homepage(){
+    window.location.href="koovs.html"
+}
+
+    </script>
