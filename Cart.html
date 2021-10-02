@@ -12,11 +12,19 @@
             font-family: sans-serif;
         }
        
-.navbar-mid{
-            text-align: center;
+        .navbar-mid{
+           width: 70%;
+           text-align: center;
+           margin-left: 17%;
+           height: 60px;
 
-           
-         }
+        }
+         .nav-koovs-logo{
+           width: 20%;
+           margin: 5px 0;
+           padding: 5px;
+
+        }  
    .cursor{
     cursor: pointer;
    }      
@@ -64,7 +72,7 @@ img{
     display: flex;
 }
 .sh-amt{
-    width: 60%;
+    width: 100%;
    
     
 }
@@ -100,11 +108,23 @@ width: 90%;
     padding: 10px;
     margin: 10px;
    
+}.total-left{
+    width: 80%;
+    
 }
-.total2{
-margin: 0 -70px 160px 100px;
+.total-right{
+
+height: 170px;
+width: 20%;
+margin-left: 20%;
 }
 
+.tax-txt{
+    font-size: 14px;
+}
+.shipping-free{
+    color: green;
+}
 #checkout{
     width: 100%;
     padding: 10px;
@@ -141,8 +161,8 @@ margin: 0 -70px 160px 100px;
 </head>
 <body>
     <div class="navbar-mid">
-        <h1 class="cursor">KOOVS.COM</h1>
-           
+        <img class=" nav-koovs-logo cursor" onclick="homepage()" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/koovslog1.jpg?raw=true" alt="">
+
     </div>
     <div class="hline"></div>
 
@@ -189,17 +209,22 @@ margin: 0 -70px 160px 100px;
             <p class="txt-bold">OFFER</p>
             <p class="txt-bold">PRICE SUMMARY</p>
             <div class="cart-amt">
-                <div>
-                    <p class="txt-bold">BAG TOTAL</p>
-                    <p>SHIPPING CHARGES</p>
-                    <p>APPLICABLE TAXES AND CHARGES</p>
-                    <p class="txt-bold" >TOTAL PAYABLE </p>
-                    <h5><small>PRICES INCLUSIVE OF ALL TAXES</small> </h5>
+                <div class="total-left">
+                    <p class="txt-bold">BAG TOTAL &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp; :</p>
+                    <p>SHIPPING CHARGES &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   :</p>
+                    <p class="tax-txt">APPLICABLE TAXE AND CHARGES&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;:</p>
+                    <p class="txt-bold" >TOTAL PAYABLE   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;  :</p>
+                    <h5><small>PRICES INCLUSIVE OF ALL TAXES:</small> </h5>
                 </div>
                 
 
-                 <div>
-                    <div id="total"class="total2"></div>
+                 <div class="total-right">
+                    <div id="total"class="txt-bold"></div>
+                    <p class="shipping-free">Free</p>
+                    
+                    <p id="gsttax">  </p>
+
+                    <div id="total2"class="txt-bold" ></div>
                  </div>
                 
             </div>
@@ -302,7 +327,9 @@ function showProduct(){
 
       img.src=product.displayimg;
       let  product_price=document.createElement("p")
-      product_price.textContent=product.price
+      product_price.textContent='₹'+" "+product.price
+      let  product_priceoff=document.createElement("p")
+      product_priceoff.textContent=product.priceoff
 
       let  product_brand=document.createElement("p")
       product_brand.textContent=product.brand
@@ -313,7 +340,7 @@ function showProduct(){
       product_name.textContent=product.name
        productImg.append(img)
 
-      productDetail.append(product_name ,select)
+      productDetail.append(product_name ,select,product_priceoff)
 
        productSize.append(product_brand,size,product_price)
 
@@ -322,22 +349,25 @@ function showProduct(){
       parent.append(productImg,productSize,productDetail)
       productImg.style.display="flex"
       productImg.style.flexDirection="column"
-      productImg.style.width="30%"
+      productImg.style.width="35%"
       productImg.style.margin="3% 0"
-      img.style.width="60%"
-      img.style.height="170px"
+      img.style.width="68%"
+      img.style.height="150px"
       img.style.margin="8px"
-      select.style.width="40px"
+      select.style.width="100px"
      // productDetails.style.display="flex"
       productDetail.style.display="flex"
       productDetail.style.justifyContent="space-between"
       productDetail.style.flexDirection="column"
       productDetail.style.margin="5%"
+      productDetail.style.widt="40%"
 
       productSize.style.display="flex"
       productSize.style.flexDirection="column"
       productSize.style.justifyContent="space-between"
       productSize.style.margin="5%"
+      productSize.style.width="25%"
+      product_priceoff.style.textDecoration="line-through"
     
       parent.style.width="100%"
      // productDetail.style.height="70%"
@@ -355,23 +385,39 @@ var total=cart.reduce(function(ac,el){
    },0)
    var total_pr=document.getElementById("total")
    //total_pr.style.textAlign="right"
-   total_pr.innerHTML=total
+   total_pr.innerHTML='₹'+" "+total
+   var total_pr2=document.getElementById("total2")
+   var tax=0;
+   tax=total*0.05
+   var gsttax=document.getElementById("gsttax").innerText='₹'+" "+parseInt(tax)
+var total2=total+tax
+total3=total2
+total4=total2
+   total_pr2.innerHTML='₹'+" "+parseInt(total2)
 
 console.log(total)
+var m30=0
+var k20=0
+var k10=0
 function applypromo(){
-
-    if(inpbox1.value=="masai30"){
-        total=total-((30*total)/100)
-        total_pr.innerHTML=total
+    if(inpbox1.value=="masai30"&&m30==0){
+        total2=total2-((30*total2)/100)
+        total_pr2.innerHTML=parseInt(total2)
+        m30++
     }else
-    if(inpbox1.value=="koovs20"){
-        total=total-((20*total)/100)
-        total_pr.innerHTML=total
+    if(inpbox1.value=="koovs20"&&k20==0){
+        total3=total3-((20*total3)/100)
+        total_pr2.innerHTML=parseInt(total3)
+        k20++
     }else
-    if(inpbox1.value=="koovs10"){
-        total=total-((10*total)/100)
-        total_pr.innerHTML=total
+    if(inpbox1.value=="koovs10"&& k10==0){
+        total4=total4-((10*total4)/100)
+        total_pr2.innerHTML=parseInt(total4)
+        k10++
     }
+}
+function homepage(){
+    window.location.href="koovs.html"
 }
 
     </script>

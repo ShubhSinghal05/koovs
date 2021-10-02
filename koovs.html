@@ -16,6 +16,131 @@
            
             font-family: 'Lato', sans-serif;
         }
+    .cursor{
+        cursor: pointer;
+    }
+       #navbar{
+           display: flex;
+           justify-content: space-between;
+           height: 123px;
+           background-color: white;
+          
+           padding: 8px;
+           text-align: center;
+       }
+       .nav-koovs-logo{
+           width: 20%;
+           margin: 5px 0;
+       }
+       .nav-section{
+           margin-top: 4%;
+       }
+       .navbar-mid span{
+           margin: 13px;
+       }
+       .navbar-container{
+           width: 30%;
+       }
+       .navbar-right-top{
+           display: flex;
+           
+           padding: 3px;
+       }
+       .navbar-right-top > div{
+           margin: 0 5%;
+       }
+       .navbar-right-login{
+           display: flex;
+       }
+       
+       .navbar-mid{
+           width: 70%;
+           text-align: center;
+           margin-left: 17%;
+       }
+       .nav-icon{
+           width: 23px;
+           height: 23px;
+           margin: 1%;
+       }
+       .nav-icons{
+           margin: 2%;
+       }
+      .navbar-right-bottom{
+          display: flex;
+      }
+      .search-box{
+           margin-right: 13%;
+           outline: none;
+           border: none;
+
+       }.search-bar{
+           margin:0 44px 0 0;
+           height: 14px;
+           width: 14px;
+       }
+       .search-item{
+           display: inline-flex;
+       }
+                  
+       .hline{
+           width: 100%;
+         border: 1px solid rgb(230, 224, 224);
+       }
+
+       .footer{
+    background-color:#ECEFF1 ;
+}
+.footer-txt{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 3%;
+
+}
+
+.bottom-container{
+    display: flex;
+    margin: 0 4%;
+   
+}
+.categorys,.brand{
+    width: 22%;
+
+}
+.contact,.help{
+    width: 19%;
+}
+.category-list,.brand-list{
+    display: flex;
+
+}
+.category-list div,.brand-list div{
+    width: 47%;
+}
+.store{
+    width: 90%;
+    height: 40px;
+    margin: 8px 0;
+
+}
+.social-logo{
+    display: flex;
+}
+.social{
+    width: 25px;
+    height: 25px;
+    margin: 5%;
+    background-color: black;
+}
+.social img{
+    color: black;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+.category-txt{
+    font-weight: 700;
+}
+        
     #heading {
         /* place-self: center; */
         /* border: 1px solid black; */
@@ -358,17 +483,42 @@ font-size:20px;
 </style>
 
 <body>
-    <div id="brandName">
-        <h1 id="heading">KOOVS.COM</h1>
+    <div id="navbar">
+        <div class="navbar-mid">
+            <div>
+                <img class=" nav-koovs-logo cursor" onclick="homepage()" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/koovslog1.jpg?raw=true" alt="">
+
+            </div>
+            <div class="nav-section">
+          <span class="create-account cursor" onclick="homepage()">  <span >MEN</span><span>WOMEN</span> <span>THE BLOG</span><span>KOOVSXYOU</span><span>IN STYLE OF</span></span>
+          </div>
+        </div>
+     <div class="navbar-riht-container">
+        
+            <div class="navbar-right-top" >
+                <div class="navbar-right-login">
+                    <div class="login cursor" onclick="login2()">Login</div>&nbsp;
+                    <span class="signup cursor" onclick="signup2()">|&nbsp;Sign&nbsp;Up</span>
+                </div>
+               
+              <div class="nav-icons cursor"><img class="nav-icon"onclick="wishlistalert()" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/wishlist.jpeg?raw=true" alt=""> <h6>WISHLIST</small></h6></div> 
+              <div class="nav-icons cursor"><img class="nav-icon"onclick="cartalert()" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/shopping-bag.png?raw=true" alt=""> <h6>BAG</small></h6>  </div>
+             
+            </div>
+           
+
+            <div class="search-item">
+                <input class="search-box" type="text"placeholder="search for products,brands">
+                <img class=" search-bar" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/search-icon%20(1).png?raw=true" alt="">
+            </div>
+        <hr>
+
     </div>
-    <div class="category">
-        <p><a href="productpage.html">MEN</a></p>
-        <p><a href="productpage.html">WOMEN</a></p>
-        <p><a href="productpage.html">THE BLOG</a></p>
-        <p><a href="productpage.html">KOOVSXYOU</a></p>
-        <p><a href="productpage.html">IN STYLE OF</a></p>
-    </div>
-    <div class="top"> <a href="productpage.html">
+       
+</div>
+<div class="hline"></div>
+    
+   <div class="top"> <a href="productpage.html">
         <img id="topImg" src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/08/30/10/onlineshoppingclothing.jpg?width=968&auto=webp&quality=75&crop=968%3A645%2Csmart"
             alt="Sliding images" />
         </a>
@@ -427,6 +577,117 @@ font-size:20px;
         <p>Men's Loungewear Guide</p>
         <button>READ MORE</button>
     </div> -->
+
+    <div class="footer">
+        <div class="footer-txt">
+            <h5 class="cursor">ABOUT KOOVS.COM</h5>
+            <h5 class="cursor" >EXPAND</h5>
+        </div>
+   
+    <div class="bottom-container">
+        
+       
+        <div class="categorys">
+        <h5 class="category-txt">TOP CATEGORIES</h5>
+
+        <div class="category-list">
+            <div>
+               <h5 class="cursor">Dresses for Girls </h5>
+               <h5 class="cursor" >Maxi Dresses</h5>
+               <h5 class="cursor" >Tops for Girls</h5>
+               <h5 class="cursor">Women Jumpsuits</h5>
+               <h5 class="cursor" >Jeans for Girls</h5>
+               <h5 class="cursor">Trousers & Leggings</h5>
+               <h5 class="cursor">Shorts</h5>
+               <h5 class="cursor">Cardigans & Pullovers</h5>
+               <h5 class="cursor">Dungarees Dress</h5>
+               <h5 class="cursor">Long Skirts</h5>
+            </div>
+            <div>
+                <h5 class="cursor">Leggings</h5>
+                <h5 class="cursor">Girls Sweatshirts</h5>
+                <h5 class="cursor" >Blazers for Girls</h5>
+                <h5 class="cursor">Boots</h5>
+                <h5 class="cursor">Jeans for Men</h5>
+                <h5 class="cursor">Heeled Sandals</h5>
+                <h5 class="cursor">Backpacks for girls</h5>
+                <h5 class="cursor">Shoes for Men</h5>
+                <h5 class="cursor">Sling Bags</h5>
+                <h5 class="cursor" >Sweaters for Girls</h5>
+                
+            </div>
+        </div>
+    </div>
+        <div class="brand">
+            <h5 class="category-txt">TOP BRANDS</h5>
+            <div class="brand-list">
+                <div>
+                    <h5 class="cursor">KOOVS</h5>
+                    <h5 class="cursor">New Look</h5>
+                    <h5 class="cursor">Forever New</h5>
+                    <h5 class="cursor">Brave Soul</h5>
+                    <h5 class="cursor">Noble Faith</h5>
+                    <h5 class="cursor" >Nike</h5>
+                    <h5 class="cursor">AX Paris</h5>
+                </div>
+               <div>
+                <h5 class="cursor" >Glamorous</h5>
+                <h5 class="cursor">Femella</h5>
+                <h5 class="cursor">Vero Moda</h5>
+                <h5 class="cursor">Only</h5>
+                <h5 class="cursor" >Adidas Originals</h5>
+                <h5 class="cursor">Koovs Coupons & Offers</h5>
+                
+               </div>
+            </div>
+        </div>
+        <div class="help">
+            <h5 class="category-txt">NEED HELP ?</h5>
+            <div class="brand-list">
+                <div>
+                    <h5 class="cursor">Contact Us</h5>
+                    <h5 class="cursor">Track Order</h5>
+                    <h5 class="cursor">Returns Policy</h5>
+                    <h5 class="cursor" >Shipping Information</h5>
+                    <h5 class="cursor">FAQs</h5>
+                    <h5 class="cursor">Terms and Conditions</h5>
+                    <h5 class="cursor">Privacy Policy</h5>
+                </div>
+               
+            </div>
+        </div>
+        <div class="contact">
+            <h5 class="category-txt">CONTACT US</h5>
+            <div class="brand-list">
+                <div>
+                    <h5 class="cursor">+91-124-6770000</h5>
+                    <h5 class="cursor">care@koovs.com</h5>
+                   
+                </div>
+               
+            </div>
+        </div>
+
+    <div>
+        <div>
+             <h5 class="category-txt" >DOWNLOAD OUR APP</h5>
+             <div>
+                <img class="store cursor" src="https://images.koovs.com/uploads/koovs/app-store-3x.png" alt="">
+                <img class="store cursor" src="https://images.koovs.com/uploads/koovs/google-play-3x.png" alt="">
+            </div>
+            <h5 class="category-txt" >CONNECT WITH US</h5>
+            <div class="social-logo">
+            <img class="social cursor" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/fbblack.png?raw=true" alt="">
+            <img class="social cursor" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/twitterblack.png?raw=true" alt="">
+            <img class="social cursor" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/instablack.png?raw=true" alt="">
+            <img class="social cursor" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/youtubeblack.png?raw=true" alt="">
+            </div>
+        </div>
+    </div>
+        
+    </div>
+    </div>
+
 </body>
 
 </html>
@@ -465,5 +726,15 @@ if(counter==4){
     counter=0;
 }
 },4000);
+
+function login2()
+	{
+		window.location.href = "Login.html";	
+	}
+	
+	function signup2()
+	{
+		window.location.href = "signup1.html";	
+	}
 
 </script>
