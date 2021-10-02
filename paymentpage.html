@@ -177,8 +177,8 @@
   <body>
     <div id="maincontainer">
       <div>
-        <div>
-          <img src="https://images.koovs.com/uploads/koovs/logo.png" />
+        <div onclick="homepage()">
+          <img src="https://images.koovs.com/uploads/koovs/logo.png"/>
         </div>
       </div>
       <div>
@@ -279,6 +279,11 @@
 
     cardname.innerHTML = null;
     cardname.append("CREDIT CARD")
+  }
+
+  function homepage()
+  {
+    window.location.href = "koovs.html";
   }
   
 </script>

@@ -402,22 +402,22 @@ var k10=0
 function applypromo(){
     if(inpbox1.value=="masai30"&&m30==0){
         total2=total2-((30*total2)/100)
-        total_pr2.innerHTML=parseInt(total2)
+        total_pr2.innerHTML= "₹"+parseInt(total2)
         m30++
     }else
     if(inpbox1.value=="koovs20"&&k20==0){
         total3=total3-((20*total3)/100)
-        total_pr2.innerHTML=parseInt(total3)
+        total_pr2.innerHTML= "₹"+parseInt(total3)
         k20++
     }else
     if(inpbox1.value=="koovs10"&& k10==0){
         total4=total4-((10*total4)/100)
-        total_pr2.innerHTML=parseInt(total4)
+        total_pr2.innerHTML= "₹"+parseInt(total4)
         k10++
     }
 }
 function homepage(){
-    window.location.href="loginHomePage.html"
+    window.location.href="koovs.html"
 }
 
     </script>
