@@ -770,6 +770,7 @@ a:link {
 	{	
 		e.preventDefault();
 		let pinmsg = document.getElementById("pinmsg");
+		pinmsg.innerText = null;
 		let pin = document.getElementById("pincode");
 			pinmsg.append("Delivery Available On "+pin.value);						
 	}
