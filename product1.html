@@ -202,7 +202,7 @@
 	}
 	#img0 > img
 	{
-		height: 80;
+		height: 81%;
 		width: 100%;
 		
 	}
@@ -770,6 +770,7 @@ a:link {
 	{	
 		e.preventDefault();
 		let pinmsg = document.getElementById("pinmsg");
+		pinmsg.innerText = null;
 		let pin = document.getElementById("pincode");
 			pinmsg.append("Delivery Available On "+pin.value);						
 	}
@@ -808,6 +809,4 @@ a:link {
 		size1.style.color = "rgb(110, 109, 109)";
 		size2.style.color = "rgb(110, 109, 109)";
 	}
-
-
 </script>

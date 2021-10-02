@@ -189,14 +189,14 @@
       </div>
       <div>
         <div id="paymentdetails">
-          <div>
+          <div id="creditcart" onclick="creditcart()">
             <span class="material-icons iconssize"> credit_card </span>
             <p class="texticons">CREDIT CARD</p>
           </div>
           <div>
             <div class="detailsstr">
               <div>
-                <h3>CREDIT CARD</h3>
+                <h3 id="cardname">CREDIT CARD</h3>
               </div>
               <div>
                 <p>Card Number</p>
@@ -222,7 +222,7 @@
               </div>
             </div>
           </div>
-          <div>
+          <div id="debitcart" onclick="debitcart()">
             <span class="material-icons iconssize"> payments </span>
             <p class="texticons">DEBIT CARD</p>
           </div>
@@ -246,3 +246,39 @@
     </div>
   </body>
 </html>
+
+
+<script>
+
+  let cardname = document.getElementById("cardname");
+
+  function debitcart()
+  {
+    let credit = document.getElementById("creditcart");
+    let debit = document.getElementById("debitcart");
+    debit.style.backgroundColor = "white";
+    debit.style.fontWeight = "bold";
+
+    credit.style.backgroundColor = "#efefef";
+    credit.style.fontWeight = "normal";
+
+    cardname.innerHTML = null;
+    cardname.append("DEBIT CARD");
+
+  }
+
+  function creditcart()
+  {
+    let debit = document.getElementById("debitcart");
+    let credit = document.getElementById("creditcart");
+    credit.style.backgroundColor = "white";
+    credit.style.fontWeight = "bold";
+
+    debit.style.backgroundColor = "#efefef";
+    debit.style.fontWeight = "normal";
+
+    cardname.innerHTML = null;
+    cardname.append("CREDIT CARD")
+  }
+  
+</script>
