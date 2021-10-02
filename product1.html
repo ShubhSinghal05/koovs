@@ -102,8 +102,9 @@
 	}
 	#pd0
 	{
+		margin-top: -6%;
 		display: grid;
-		grid-template-columns: 52% 48%;
+		grid-template-columns: 48% 57%;
 	}
 	#pd0 > h1
 	{
@@ -119,10 +120,10 @@
 	{
 		border:1px solid grey;
 		width: 100%;
-		height: 300px;
+		height: auto;
 
 	}
-	#pincode
+	#pincode , #pdistrict , #pstate
 	{
 		margin-left: 5%;
 		height: 35px;
@@ -349,13 +350,14 @@ h5{
 	font-size: 14px;
 	font-weight:lighter;
 }
-#pinmsg
+#pinmsg , #paddress
 {
 	margin-left:5%;
 	color: rgb(52, 54, 52);
 	font-size: 100%;
 	font-weight: bold;
 	margin-bottom: -3%;
+	text-transform: capitalize;
 }
 
 a:link {
@@ -452,7 +454,6 @@ a:link {
 						Offer applicable over and above promtional diccount T&C
 					</h4>
 				</div>
-
 		</div>
 	</div>
 	<div id="pd0"><h1>Product Details</h1><h1>Delivery Option</h1></div>
@@ -488,12 +489,15 @@ a:link {
 			</div>
 		</div>
 		<div id="md2">
-			<h2 style="margin-left: 5%;"> Pincode <h2>
+			<h2 style="margin-left: 5%;"> Check Address <h2>
 				<form onsubmit="checkpincode(event)" id="pinform">
+					<input type="text" id="pdistrict" required placeholder="  ENTER DISTRICT NAME"><br><br>
+					<input type="text" id="pstate" required placeholder="  ENTER STATE NAME"><br><br>
 					<input type="number" id="pincode" required placeholder="  ENTER PINCODE">
 					<button id="check" type="submit">Check</button><br>
 				</form>
 				<p id="pinmsg"></p>
+				<p id="paddress"></p>
 				<br>
 				<P id="md2grey">The Product maybe applicable for free Delivery</P>
 		</div>
@@ -770,9 +774,14 @@ a:link {
 	{	
 		e.preventDefault();
 		let pinmsg = document.getElementById("pinmsg");
+		let pinaddress = document.getElementById("paddress");
 		pinmsg.innerText = null;
+		paddress.innerText = null;
 		let pin = document.getElementById("pincode");
-			pinmsg.append("Delivery Available On "+pin.value);						
+		let pstate = document.getElementById("pstate");
+		let pdistrict = document.getElementById("pdistrict");
+			pinmsg.append("Delivery Available On ");									
+			paddress.append(pdistrict.value+", "+pstate.value+", "+pin.value);
 	}
 
 	let size1 = document.getElementById("size1");
