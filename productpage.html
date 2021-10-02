@@ -21,7 +21,9 @@
             grid-template-rows:60px 100%;
             /* border: 2px solid red; */
         }
-        
+        .cursor{
+            cursor: pointer;
+        }
         #topnavbar {
             background-color:white;
             border-bottom: 1px solid #CFD8DC;
@@ -375,7 +377,7 @@
                     <div class="navbaroptions"><p>KOOVSXYOU</p></div>
                 </div>
                 <div>
-                   <img src="https://images.koovs.com/uploads/koovs/logo.png"></a>
+                   <img class="cursor" onclick="homepage()" src="https://images.koovs.com/uploads/koovs/logo.png"></a>
                 </div>
                 <div id="rightnavbaricons">
                     <div>
@@ -1979,6 +1981,9 @@ let details1=[
             prod.innerText="Street Wear ( "+(details.length)+" Products ) ";
         }
          }
+         function homepage(){
+              window.location.href="koovs.html"
+        }
     </script>
 </body>
 </html>
