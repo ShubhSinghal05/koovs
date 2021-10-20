@@ -385,6 +385,24 @@ a:link {
 		}
 
 
+		#a1
+		{
+			border:1px solid #D3D3D3;
+			width: 70%;
+		}
+		#a2
+		{
+			margin-left: 10%;
+		}
+		#a3
+		{
+			margin-left: 5%;
+		}
+		#a4
+		{
+			text-align: left;
+			margin-left:2%;
+		}
 
 </style>
 <body>
@@ -445,11 +463,11 @@ a:link {
 					<button id="b2" onclick="addtobag()" ><h2>ADD TO BAG</h2> </button>
 				</div>
 				<p id="offer">Offer</p>
-				<div style="border:1px solid #D3D3D3;width: 70%;">
-					<h3 style="margin-left: 10%;">
+				<div id="a1">
+					<h3 id="a2">
 						Get 5% instant discount on all prepaid orders
 					</h3>
-					<h4 style="margin-left: 10%;">
+					<h4 id="a2">
 						Offer applicable over and above promtional diccount T&C
 					</h4>
 				</div>
@@ -461,13 +479,13 @@ a:link {
 			<div id="pd1">
 				<div id="srng">
 					<div>
-						<h2 style="margin-left: 10%;"> Info & Care <h2>
+						<h2 id="a2"> Info & Care <h2>
 					</div>
 					<div>
-						<h2 style="margin-left: 10%;"> Delivery & Return <h2>
+						<h2 id="a2"> Delivery & Return <h2>
 					</div>
 					<div>
-						<h2 style="margin-left: 10%;"> Seller Details <h2>
+						<h2 id="a2"> Seller Details <h2>
 					</div>
 				</div>
 			</div>
@@ -488,7 +506,7 @@ a:link {
 			</div>
 		</div>
 		<div id="md2">
-			<h2 style="margin-left: 5%;"> Check Address <h2>
+			<h2 id="a3"> Check Address <h2>
 				<form onsubmit="checkpincode(event)" id="pinform">
 					<input type="text" id="pdistrict" required placeholder="  ENTER YOUR ADDRESS "><br><br>
 					<input type="text" id="pstate" required placeholder="  ENTER CITY NAME"><br><br>
@@ -503,7 +521,7 @@ a:link {
 	</div>
 	<br>
 	<div>
-		<h1 style="text-align: left;margin-left:2%;">Related Searches</h1>
+		<h1 id="a4">Related Searches</h1>
 		<div id="lastmd">
 			<div id="ld" onclick="productpage()">
 				<strong >Men</strong>
