@@ -22,7 +22,7 @@
       font-family: "Lato", sans-serif;
       margin: 0;
     }
-    #maincontainer {
+    #maincontainer { 
       display: grid;
       grid-template-columns: 100%;
       grid-template-rows: 70px 50px 50px 100%;
@@ -86,7 +86,7 @@
       display: inline-block;
       position: relative;
       top: -12px;
-      margin-left: 20px;
+      margin-left: 15px;
     }
     .detailsstr {
         display: grid;
@@ -138,7 +138,7 @@
         grid-row-end: 7;
     }
     .detailsstr > div > input {
-        width: 200px;
+        width: 40%;
         height: 30px;
         border: none;
         border-bottom: 1px solid #95989A;
@@ -147,7 +147,7 @@
         outline: none;
     }
     .detailsstr > div:nth-child(2) > input {
-        width: 450px;
+        width: 70%;
         height: 30px;
     }
     .detailsstr > div:nth-child(5) > input {
@@ -155,14 +155,14 @@
         height: 30px;
     }
     .detailsstr > div:nth-child(6) > input {
-        width: 450px;
+        width: 70%;
         height: 30px;
     }
     .detailsstr > div:nth-child(7) > a > button {
         background-color:black;
         color: white;
         border: none;
-        width: 300px;
+        width: 60%;
         height: 50px;
         font-weight: bolder;
         font-size: 20px;
@@ -172,6 +172,29 @@
         margin-top: 10px;
         margin-bottom: 0px;
         font-size: 16px;
+    }
+    @media (max-width: 790px) {
+      .texticons {
+        visibility: hidden;
+      }
+      #paymentdetails {
+        margin-left: 5%;
+        width:450px;
+        grid-template-columns:80px 400px ;
+      }
+    }
+    @media (max-width: 480px) {
+      .iconssize {
+        margin-left:5px;
+      }
+      .texticons {
+        visibility: hidden;
+      }
+      #paymentdetails {
+        margin-left: 5%;
+        width:350px;
+        grid-template-columns:60px 350px ;
+      }
     }
   </style>
   <body>
