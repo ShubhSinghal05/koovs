@@ -42,14 +42,14 @@ This is the clone of Koovs.com ,which we made during the UNIT II construct week.
 ### Website Flow
 * Landing page is the Homepage of Website.
 
-    ![Koovs.com landing page](https://i.imgur.com/Fb7Kqgo.gif)
+
 
 * Login Page/SignUp Page
 
     ![koovs.com login page/signup page](https://i.imgur.com/bPA0nx6.gif)
 * Products Page
 
- 
+  
 
 * Cart
 * Payments Page
