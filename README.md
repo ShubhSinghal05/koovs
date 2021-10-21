@@ -43,7 +43,7 @@ This is the clone of Koovs.com ,which we made during the UNIT II construct week.
 
 * Login Page/SignUp Page
 
-    ![Login Signup Page gif](https://i.imgur.com/bPA0nx6.gif)
+ 
 * Products Page
 
     ![Products Page gif](https://i.imgur.com/Bx7ocai.gif)
