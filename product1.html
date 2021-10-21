@@ -385,19 +385,251 @@ a:link {
 		}
 
 
+		#a1 
+		{
+			border:1px solid #D3D3D3;
+			width: 70%;
+		}
+		#a2 ,#aa2
+		{
+			margin-left: 10%;
+		}
+		#a3
+		{
+			margin-left: 5%;
+		}
+		#a4
+		{
+			text-align: left;
+			margin-left:2%;
+		}
+		#a5
+		{
+			height: auto
+		}
+
+
+@media (max-width: 800px)
+{
+	#productdetails
+	{
+		display: grid;
+		grid-template-columns: 100%;
+		padding: 2%;
+		
+	}
+
+	#mainimg
+	{
+		width: 100%;
+		height: 500px;
+	}
+	#a5
+	{
+		margin-top: -140px;
+		margin-left: 50px;
+	}
+	#size
+	{
+		display: grid;
+		grid-template-columns: 7% 7% 7%;
+		gap: 5%;
+	}
+	#b
+	{
+		display: grid;
+		grid-template-columns: 45% 50%;
+		gap: 2%;
+	}	
+	#b1 , #b2
+	{
+		width: 100%;
+	}
+	#a1
+	{
+		width: 100%;
+		padding:0px;
+	}
+	#a2a
+	{
+		width: 100%;
+	}
+	#aa2
+	{
+		visibility: hidden;
+	}
+	#srng
+	{
+		display: grid;
+		grid-template-columns: 100%;
+		height: 60px;
+	}
+	#mpd1 , #md2
+	{
+		margin-left: 1.5%;
+	}
+	#productdetails2
+	{
+		margin-top: 2%;
+		display: grid;
+		grid-template-columns: 98%;	
+		margin-left: 4%;
+	}
+	#a5
+	{
+		margin-left: 4%;
+		margin-top: 2%;
+	}
+	#check
+	{
+		width: fit-content;
+	}
+	#a4
+	{
+		margin-left: 4%;
+	}
+	#lastmd 
+	{
+		display: grid;
+		grid-template-columns:auto;
+		margin-left: 4%;
+	}
+	#ld
+	{
+		width:auto;
+		height:fit-content;
+		margin-top: 2%;
+	}
+	#navhead
+	{
+		margin-left: 25%;
+		margin-top: 10%;
+	}
+
+
+	#pd0 , #footer , #navr
+	{
+		visibility: hidden;
+	}
+}		
+
+
+
+
+
+
+@media(max-width:480px)
+{
+	#productdetails
+	{
+		display: grid;
+		grid-template-columns: 100%;
+		padding: 2%;
+		margin-left: -3%;
+	}
+
+	#mainimg
+	{
+		width: 100%;
+		height: 500px;
+	}
+	#a5
+	{
+		margin-top: -140px;
+		margin-left: 50px;
+	}
+	#size
+	{
+		display: grid;
+		grid-template-columns: 7% 7% 7%;
+		gap: 5%;
+	}
+	#b
+	{
+		display: grid;
+		grid-template-columns: 45% 50%;
+		gap: 2%;
+	}	
+	#b1 , #b2
+	{
+		width: 100%;
+	}
+	#a1
+	{
+		width: 100%;
+		padding:0px;
+	}
+	#a2a
+	{
+		width: 100%;
+	}
+	#aa2
+	{
+		visibility: hidden;
+	}
+	#srng
+	{
+		display: grid;
+		grid-template-columns: 100%;
+		height: 60px;
+	}
+	#mpd1 , #md2
+	{
+		margin-left: 1.5%;
+	}
+	#productdetails2
+	{
+		margin-top: 2%;
+		display: grid;
+		grid-template-columns: 98%;	
+	}
+	#a5
+	{
+		margin-left: 4%;
+	}
+	#check
+	{
+		width: fit-content;
+		margin-top: 2%;
+	}
+	#lastmd
+	{
+		display: grid;
+		grid-template-columns:auto;
+	}
+	#ld
+	{
+		width:auto;
+	}
+	#navhead
+	{
+		margin-left: 30%;
+		margin-top: 20%;
+	}
+
+
+	#pd0 , #footer , #navr
+	{
+		visibility: hidden;
+	}
+}
+
+
+
+
 
 </style>
 <body>
 	
 	<div id="navbar">
         <div class="navbar-mid">
-            <h1 class="create-account cursor" onclick="home()">KOOVS.COM</h1>
-            <a href="productpage.html">
+            <h1 class="create-account cursor" onclick="home()" id="navhead">KOOVS.COM</h1>
+            <a href="productpage.html" id="navr">
           <span class="create-account cursor colortop">  <span onclick="productpage()" >MEN</span><span onclick="productpage()">WOMEN</span> <span onclick="productpage()">THE BLOG</span><span onclick="productpage()">KOOVSXYOU</span><span>IN STYLE OF</span></span>
 		</a>
         </div>
             <div>
-        <div class="navbar-right">
+        <div class="navbar-right" id="navr">
             <span class="login cursor" onclick="login()">Login</span>&nbsp;|&nbsp;
             <span id="vert-line"></span>
             <span class="signup cursor" onclick="signup()">Sign_Up</span>
@@ -406,11 +638,11 @@ a:link {
          
 
         </div>
-        <div class="search-item">
+        <div class="search-item" id="navr">
             <input class="search-box" type="text"placeholder="search for products,brands">
             <img class=" search-bar" src="https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/search-512.png" alt="">
         </div>
-        <hr>
+        <hr id="navr">
     </div>
 </div>
 <hr>
@@ -427,7 +659,7 @@ a:link {
 				</div>
 			</div>
 
-		<div style="height: auto;">
+		<div id="a5">
 				<p id="pname">Name</p>
 				<p>Long Wash Slim Fit<p>
 				<p id="pprice">₹ 000</p>
@@ -445,11 +677,11 @@ a:link {
 					<button id="b2" onclick="addtobag()" ><h2>ADD TO BAG</h2> </button>
 				</div>
 				<p id="offer">Offer</p>
-				<div style="border:1px solid #D3D3D3;width: 70%;">
-					<h3 style="margin-left: 10%;">
+				<div id="a1">
+					<h3 id="a2">
 						Get 5% instant discount on all prepaid orders
 					</h3>
-					<h4 style="margin-left: 10%;">
+					<h4 id="a2">
 						Offer applicable over and above promtional diccount T&C
 					</h4>
 				</div>
@@ -460,14 +692,14 @@ a:link {
 		<div id="mpd1">
 			<div id="pd1">
 				<div id="srng">
-					<div>
-						<h2 style="margin-left: 10%;"> Info & Care <h2>
+					<div id="a2a">
+						<h2 id="a2"> Info & Care <h2>
 					</div>
 					<div>
-						<h2 style="margin-left: 10%;"> Delivery & Return <h2>
+						<h2 id="aa2"> Delivery & Return <h2>
 					</div>
 					<div>
-						<h2 style="margin-left: 10%;"> Seller Details <h2>
+						<h2 id="aa2"> Seller Details <h2>
 					</div>
 				</div>
 			</div>
@@ -488,7 +720,7 @@ a:link {
 			</div>
 		</div>
 		<div id="md2">
-			<h2 style="margin-left: 5%;"> Check Address <h2>
+			<h2 id="a3"> Check Address <h2>
 				<form onsubmit="checkpincode(event)" id="pinform">
 					<input type="text" id="pdistrict" required placeholder="  ENTER YOUR ADDRESS "><br><br>
 					<input type="text" id="pstate" required placeholder="  ENTER CITY NAME"><br><br>
@@ -503,7 +735,7 @@ a:link {
 	</div>
 	<br>
 	<div>
-		<h1 style="text-align: left;margin-left:2%;">Related Searches</h1>
+		<h1 id="a4">Related Searches</h1>
 		<div id="lastmd">
 			<div id="ld" onclick="productpage()">
 				<strong >Men</strong>
