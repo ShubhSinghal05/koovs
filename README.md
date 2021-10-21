@@ -4,7 +4,6 @@
 This is the clone of Koovs.com ,which we made during the UNIT II construct week. We made this website functional as well.
 
 
-![Clone of Koovs.com](https://miro.medium.com/max/875/1*9_Dsv9Wl1PStg6CtJnJFZg.jpeg)
 
 ## Technologies Used :
 * HTML
@@ -40,16 +39,14 @@ This is the clone of Koovs.com ,which we made during the UNIT II construct week.
     git clone https://github.com/ShubhSinghal05/koovs.git
     ```
 ### Website Flow
-* Landing page is the Homepage of Website.
-
-    ![Imgur](https://i.imgur.com/JfkQRcf.gif)
+* Landing page
 
 * Login Page/SignUp Page
 
-    ![Imgur](https://i.imgur.com/bPA0nx6.gif)
+    ![Login Signup Page gif](https://i.imgur.com/bPA0nx6.gif)
 * Products Page
 
-    ![Imgur](https://i.imgur.com/Bx7ocai.gif)
+    ![Products Page gif](https://i.imgur.com/Bx7ocai.gif)
 
 * Cart
 * Payments Page
