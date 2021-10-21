@@ -21,6 +21,12 @@ This is the clone of Koovs.com ,which we made during the UNIT II construct week.
 * Multiple Images view on Hovering over images on Products page & Quick view Page.
 
 
+## Responsive Pages
+* Products Page
+* Quick View Page
+* Payments Page
+
+
 ## Getting Started :
 
 
