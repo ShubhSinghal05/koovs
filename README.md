@@ -25,6 +25,7 @@ This is the clone of Koovs.com ,which we made during the UNIT II construct week.
 * Products Page
 * Quick View Page
 * Payments Page
+* Cart Page
 
 
 ## Getting Started :
@@ -56,7 +57,7 @@ This is the clone of Koovs.com ,which we made during the UNIT II construct week.
 
 ## Contributors :
 * Saurabh Nimkande
-* Shubham Singal
+* Shubham Singhal
 * Sarang Gunjal
 * Pankaj Kumar
 
