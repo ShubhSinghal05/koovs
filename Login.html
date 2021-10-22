@@ -23,7 +23,9 @@
            justify-content: space-between;
            height: 110px;
            background-color: white;
-          
+          position: sticky;
+          top: 0;
+
            padding: 5px;
            text-align: center;
        }
@@ -132,6 +134,7 @@
         font-weight: 600;
         margin-left: 30px;
     }
+    
 
     
     .form-txt{
@@ -209,7 +212,7 @@ h5{
     width: 47%;
 }
 .store{
-    width: 65%;
+    width: 90%;
     height: 40px;
     margin: 8px 0;
 
@@ -221,6 +224,7 @@ h5{
     width: 25px;
     height: 25px;
     margin: 5%;
+    background-color: black;
 }
 .social img{
     color: black;
@@ -232,6 +236,19 @@ h5{
 }
 .cursor{
     cursor: pointer;
+}
+@media screen and (max-width:720px){
+    .loginOption{
+        width: 100%;
+        display: block;
+    }
+    .loginOptionBtn{
+        width: 86%;
+        margin-bottom: 5px;
+    }
+    .iconTxt{
+        font-size: 14px;
+    }
 }
 
 
@@ -245,7 +262,7 @@ h5{
 
             </div>
             <div class="nav-section">
-          <span class="create-account cursor" onclick="homepage()">  <span >MEN</span><span>WOMEN</span> <span>THE BLOG</span><span>KOOVSXYOU</span><span>IN STYLE OF</span></span>
+          <span class="create-account cursor" onclick="productpage()">  <span >MEN</span><span>WOMEN</span> <span>THE BLOG</span><span>KOOVSXYOU</span><span>IN STYLE OF</span></span>
           </div>
         </div>
      <div class="navbar-riht-container">
@@ -407,7 +424,7 @@ h5{
             </div>
             <h5 class="category-txt" >CONNECT WITH US</h5>
             <div class="social-logo">
-            <img class="social cursor" src="https://cdn-icons-png.flaticon.com/512/123/123717.png" alt="">
+            <img class="social cursor" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/fbblack.png?raw=true" alt="">
             <img class="social cursor" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/twitterblack.png?raw=true" alt="">
             <img class="social cursor" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/instablack.png?raw=true" alt="">
             <img class="social cursor" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/youtubeblack.png?raw=true" alt="">
@@ -443,7 +460,7 @@ h5{
 })
 if(flag){
     alert("logged in successfully")
-    homepage()
+    loginHomePage()
 }else{
     alert("Invalid credentials") 
     window.location.href = "Login.html";
@@ -458,7 +475,9 @@ function loginHomePage()
 function homepage(){
     window.location.href="koovs.html"
 }
-
+function productpage(){
+    window.location.href="productpage.html"
+}
 
     function login2()
 	{
